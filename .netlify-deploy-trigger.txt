@@ -1,0 +1,9 @@
+Next.js Security Fix Applied
+============================
+
+This file was created to force a new deployment after upgrading Next.js to version 15.1.4.
+
+The security vulnerability CVE-2025-55182 has been resolved.
+
+Deployment timestamp: 2025-12-26
+
