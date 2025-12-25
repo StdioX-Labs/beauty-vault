@@ -5,5 +5,9 @@ This file was created to force a new deployment after upgrading Next.js to versi
 
 The security vulnerability CVE-2025-55182 has been resolved.
 
-Deployment timestamp: 2025-12-26
+Deployment timestamp: 2025-12-26 01:00:00
+Build configuration: netlify.toml added with cache clearing
+Dependencies: Next.js 15.1.4 confirmed in pnpm-lock.yaml
+
+IMPORTANT: Netlify should now build successfully with the patched Next.js version.
 
