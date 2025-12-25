@@ -1,10 +1,13 @@
 [build]
-  command = "pnpm install --frozen-lockfile && pnpm run build"
+  command = "rm -rf .next node_modules/.cache && pnpm install --frozen-lockfile && pnpm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22.21.1"
   NPM_VERSION = "10.9.4"
+  NETLIFY_USE_PNPM = "true"
+  # Force cache bust to ensure Next.js 15.1.4 is used
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
