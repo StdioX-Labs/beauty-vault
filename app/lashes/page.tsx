@@ -39,6 +39,9 @@ export default function LashesByShazz() {
                         <a href="#services" className="hidden sm:inline text-xs tracking-wider uppercase font-medium text-white/80 hover:text-white transition-colors">
                             Services
                         </a>
+                        <a href="/about" className="hidden sm:inline text-xs tracking-wider uppercase font-medium text-white/80 hover:text-white transition-colors">
+                            About
+                        </a>
                         <a
                             href="#book"
                             className="px-3.5 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 rounded-full hover:shadow-lg hover:shadow-pink-300/50 transition-all duration-300 text-[10px] sm:text-xs tracking-wider uppercase font-semibold whitespace-nowrap"
