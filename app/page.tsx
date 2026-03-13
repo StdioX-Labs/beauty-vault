@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
-  const bookingUrl = 'https://booking.reveive.co.ke/';
+  const bookingUrl = 'https://booking.revive.co.ke/';
 
   return (
     <div className="min-h-screen bg-white">

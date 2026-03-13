@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const bookingUrl = 'https://booking.reveive.co.ke/';
+    const bookingUrl = 'https://booking.revive.co.ke/';
 
     useEffect(() => {
         const handleScroll = () => {
