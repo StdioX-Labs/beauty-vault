@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 export default function ReviveAesthetics() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const bookingUrl = 'https://booking.reveive.co.ke/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -162,7 +163,7 @@ export default function ReviveAesthetics() {
                             About
                         </a>
                         <a
-                            href="#book"
+                            href={bookingUrl}
                             className="px-3.5 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-white to-gray-200 text-gray-900 rounded-full hover:shadow-lg hover:shadow-white/50 transition-all duration-300 text-[10px] sm:text-xs tracking-wider uppercase font-semibold whitespace-nowrap"
                         >
                             Book Now
@@ -224,7 +225,7 @@ export default function ReviveAesthetics() {
 
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
                         <a
-                            href="#book"
+                            href={bookingUrl}
                             className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-white to-gray-200 text-gray-900 rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/50 hover:scale-105"
                         >
                             <span className="relative z-10 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
@@ -359,7 +360,7 @@ export default function ReviveAesthetics() {
                                             {service.price}
                                         </div>
                                         <a
-                                            href="#book"
+                                            href={bookingUrl}
                                             className="inline-flex items-center gap-2 text-white hover:text-gray-300 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
                                         >
                                             Book Now

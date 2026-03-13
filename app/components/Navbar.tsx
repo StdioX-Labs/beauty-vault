@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const bookingUrl = 'https://booking.reveive.co.ke/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,7 +55,7 @@ export default function Navbar() {
                     </Link>
 
                     <a
-                        href="#book"
+                        href={bookingUrl}
                         className="px-3.5 sm:px-5 py-1.5 sm:py-2 bg-black text-white rounded-full hover:bg-zinc-800 transition-all duration-300 text-[10px] sm:text-xs tracking-wider uppercase font-semibold whitespace-nowrap"
                     >
                         Book Now
@@ -64,4 +65,3 @@ export default function Navbar() {
         </nav>
     );
 }
-

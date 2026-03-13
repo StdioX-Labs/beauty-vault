@@ -4,6 +4,8 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
+  const bookingUrl = 'https://booking.reveive.co.ke/';
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -56,7 +58,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#book"
+                href={bookingUrl}
                 className="px-8 py-4 border-2 border-black text-black rounded-full transition-all duration-300 hover:bg-black hover:text-white hover:shadow-xl hover:scale-105"
               >
                 <span className="text-sm tracking-wider uppercase font-medium">
@@ -407,7 +409,7 @@ export default function Home() {
           {/* CTA */}
           <div className="text-center">
             <a
-              href="#book"
+              href={bookingUrl}
               className="group relative inline-block px-8 py-4 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105"
             >
               <span className="relative z-10 text-sm tracking-wider uppercase font-medium">
