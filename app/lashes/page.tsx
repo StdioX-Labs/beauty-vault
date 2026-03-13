@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 
 export default function LashesByShazz() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const lashesBookingUrl = 'https://booking.lashesbyshazz.com/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,8 +44,10 @@ export default function LashesByShazz() {
                             About
                         </a>
                         <a
-                            href="#book"
+                            href={lashesBookingUrl}
                             className="px-3.5 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 rounded-full hover:shadow-lg hover:shadow-pink-300/50 transition-all duration-300 text-[10px] sm:text-xs tracking-wider uppercase font-semibold whitespace-nowrap"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Book Now
                         </a>
@@ -109,8 +112,10 @@ export default function LashesByShazz() {
 
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
                         <a
-                            href="#book"
+                            href={lashesBookingUrl}
                             className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-pink-300/50 hover:scale-105"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <span className="relative z-10 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
                                 Begin Your Journey
@@ -194,8 +199,10 @@ export default function LashesByShazz() {
                                         From <span className="text-pink-300">KSh 3,500</span>
                                     </div>
                                     <a
-                                        href="#book"
+                                        href={lashesBookingUrl}
                                         className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         Reserve Now
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -226,8 +233,10 @@ export default function LashesByShazz() {
                                         From <span className="text-pink-300">KSh 5,000</span>
                                     </div>
                                     <a
-                                        href="#book"
+                                        href={lashesBookingUrl}
                                         className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         Reserve Now
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,8 +267,10 @@ export default function LashesByShazz() {
                                         From <span className="text-pink-300">KSh 6,500</span>
                                     </div>
                                     <a
-                                        href="#book"
+                                        href={lashesBookingUrl}
                                         className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         Reserve Now
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -290,8 +301,10 @@ export default function LashesByShazz() {
                                         From <span className="text-pink-300">KSh 4,500</span>
                                     </div>
                                     <a
-                                        href="#book"
+                                        href={lashesBookingUrl}
                                         className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         Reserve Now
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -322,8 +335,10 @@ export default function LashesByShazz() {
                                         From <span className="text-pink-300">KSh 2,500</span>
                                     </div>
                                     <a
-                                        href="#book"
+                                        href={lashesBookingUrl}
                                         className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         Reserve Now
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -510,7 +525,7 @@ export default function LashesByShazz() {
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                         <a
-                            href="tel:+254700000000"
+                            href="tel:+254769781771"
                             className="group relative px-10 py-5 bg-gray-900 text-white rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-900/30 hover:scale-105"
                         >
                             <span className="relative z-10 text-sm tracking-[0.2em] uppercase font-medium flex items-center gap-2">
@@ -522,7 +537,7 @@ export default function LashesByShazz() {
                         </a>
 
                         <a
-                            href="https://wa.me/254700000000"
+                            href="https://wa.me/254769781771"
                             className="group relative px-10 py-5 border-2 border-gray-900 text-gray-900 rounded-full transition-all duration-500 hover:bg-gray-900 hover:text-white hover:shadow-2xl hover:shadow-gray-900/30 hover:scale-105"
                         >
                             <span className="text-sm tracking-[0.2em] uppercase font-medium flex items-center gap-2">
@@ -563,7 +578,7 @@ export default function LashesByShazz() {
                                 </svg>
                             </div>
                             <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Contact</h4>
-                            <p className="text-gray-900/80 text-sm">+254 700 000 000<br />info@beautyvault.co.ke</p>
+                            <p className="text-gray-900/80 text-sm">+254 769 781 771<br />info@beautyvault.co.ke</p>
                         </div>
                     </div>
                 </div>
