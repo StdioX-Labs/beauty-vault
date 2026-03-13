@@ -557,8 +557,8 @@ export default function LashesByShazz() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                             </div>
-                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Location</h4>
-                            <p className="text-gray-900/80 text-sm">The Beauty Vault<br />Nairobi, Kenya</p>
+                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Contact Us</h4>
+                            <p className="text-gray-900/80 text-sm">Phone<br />+254769781771</p>
                         </div>
 
                         <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
@@ -567,8 +567,8 @@ export default function LashesByShazz() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Hours</h4>
-                            <p className="text-gray-900/80 text-sm">Mon - Sat: 9AM - 7PM<br />Sunday: By Appointment</p>
+                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Email</h4>
+                            <p className="text-gray-900/80 text-sm">lashesbyshazz001@gmail.com</p>
                         </div>
 
                         <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
@@ -577,8 +577,8 @@ export default function LashesByShazz() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Contact</h4>
-                            <p className="text-gray-900/80 text-sm">+254 769 781 771<br />info@beautyvault.co.ke</p>
+                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Address</h4>
+                            <p className="text-gray-900/80 text-sm">SILVERPOOL OFFICE SUITES , HURLINGHAM</p>
                         </div>
                     </div>
                 </div>
