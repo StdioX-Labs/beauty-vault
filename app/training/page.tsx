@@ -4,11 +4,12 @@ import Link from 'next/link';
 import BlendBg from '@/lib/BlendBg';
 import { SiteFooter, SiteNav } from '@/lib/old-site/SiteShell';
 import { SITE_URL } from '@/lib/old-site/pages';
+import { Breadcrumbs, JsonLd } from '@/lib/seo';
 
 // Lashes by Shazz Academy. Kept at /training, the old site's training URL.
 // Course details: Lloyd's UV training flyers and the old shop's training products.
 
-const TITLE = 'Lashes by Shazz Academy – Lash Technician Training in Nairobi';
+const TITLE = 'UV Lash Training & Lash Courses in Nairobi – Lashes by Shazz Academy';
 const DESCRIPTION =
   'Become a certified lash technician with Lashes by Shazz Academy. Beginner Individual Lashes Course (KES 65,000) and UV Lash Training (KES 30,000, full UV lamp kit included), with live model practice and certification in Nairobi.';
 
@@ -132,9 +133,61 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
+const ACADEMY = {
+  '@type': 'EducationalOrganization',
+  name: 'Lashes by Shazz Academy',
+  url: `${SITE_URL}/training`,
+  sameAs: ['https://www.instagram.com/lashesbyshazzacademy/', 'https://www.tiktok.com/@lashesbyshazzacademy'],
+};
+const CBD_LOCATION = {
+  '@type': 'Place',
+  name: 'Lashes by Shazz Academy, Absa Towers',
+  address: { '@type': 'PostalAddress', streetAddress: 'Absa Towers, Lower Ground, Loita Street', addressLocality: 'Nairobi', addressCountry: 'KE' },
+};
+const priceOf = (c: Course) => Number(c.price.replace(/[^0-9]/g, ''));
+const COURSE_INFO: Record<string, { description: string; workload: string }> = {
+  'Beginner Individual Lashes Course': {
+    description:
+      'Beginner lash course in Nairobi, Kenya. Learn individual lash extensions from zero: isolation, lash mapping, sanitation, client consultation and live model practice. 1 month, Fridays and Saturdays 8am to 2pm, with certificate, community and alumni benefits.',
+    workload: 'P1M',
+  },
+  'UV Lash Training': {
+    description:
+      'UV lash training in Nairobi, Kenya, from the #1 UV lash trainers in Kenya. 5-day intensive for lash technicians, full UV lamp kit included, certificate and continuous mentorship. A new class every week.',
+    workload: 'P5D',
+  },
+};
+const coursesJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': COURSES.map((c) => ({
+    '@type': 'Course',
+    name: c.name === 'UV Lash Training' ? 'UV Lash Training (UV Lash Course)' : c.name,
+    description: COURSE_INFO[c.name]?.description ?? c.summary,
+    url: `${SITE_URL}/training`,
+    inLanguage: 'en',
+    provider: ACADEMY,
+    educationalCredentialAwarded: 'Lashes by Shazz certificate',
+    offers: {
+      '@type': 'Offer',
+      category: 'Paid',
+      price: priceOf(c),
+      priceCurrency: 'KES',
+      url: `${SITE_URL}/training`,
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Onsite',
+      location: CBD_LOCATION,
+      courseWorkload: COURSE_INFO[c.name]?.workload,
+    },
+  })),
+};
+
 export default function AcademyPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
+      <JsonLd data={coursesJsonLd} />
+      <Breadcrumbs trail={[{ name: 'Lashes by Shazz Academy', path: '/training' }]} />
       <SiteNav />
 
       {/* Hero */}

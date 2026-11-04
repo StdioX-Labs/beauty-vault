@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '@/lib/old-site/pages';
+import { Breadcrumbs } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Shasha Hair – Wigs in Nairobi | The Beauty Vault',
@@ -23,5 +24,10 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <Breadcrumbs trail={[{ name: 'Shasha Hair', path: '/hair' }]} />
+      {children}
+    </>
+  );
 }

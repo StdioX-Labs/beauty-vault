@@ -1,6 +1,31 @@
 import type { Metadata } from 'next';
 import LashesClient from './LashesClient';
 import { SITE_URL } from '@/lib/old-site/pages';
+import { LASH_SETS, LASH_REMOVAL } from './LashMenu';
+import { Breadcrumbs, JsonLd } from '@/lib/seo';
+
+// Every set and refill with its price (KES, VAT included), so search engines can show prices.
+const offer = (name: string, price: number, branch: '#hurlingham' | '#cbd' | null = null) => ({
+  '@type': 'Offer',
+  price,
+  priceCurrency: 'KES',
+  itemOffered: { '@type': 'Service', name, provider: { '@id': `${SITE_URL}/#organization` }, areaServed: 'Nairobi, Kenya' },
+  ...(branch ? { seller: { '@id': `${SITE_URL}/${branch}` } } : {}),
+});
+const priceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'Lashes by Shazz lash extension prices (KES, VAT included)',
+  url: `${SITE_URL}/lashes`,
+  itemListElement: [
+    ...LASH_SETS.flatMap((s) => [
+      offer(`UV ${s.name}`, s.uv.set),
+      offer(`UV ${s.name.replace('Set', 'Refill')}`, s.uv.refill),
+    ]),
+    ...LASH_SETS.flatMap((s) => [offer(s.name, s.normal.set), offer(s.name.replace('Set', 'Refill'), s.normal.refill)]),
+    offer('Lash Removal', LASH_REMOVAL),
+  ],
+};
 
 export const metadata: Metadata = {
   title: 'UV Lash Extensions in Nairobi – Lashes by Shazz',
@@ -19,5 +44,11 @@ export const metadata: Metadata = {
 };
 
 export default function LashesPage() {
-  return <LashesClient />;
+  return (
+    <>
+      <JsonLd data={priceJsonLd} />
+      <Breadcrumbs trail={[{ name: 'UV Lashes', path: '/lashes' }]} />
+      <LashesClient />
+    </>
+  );
 }

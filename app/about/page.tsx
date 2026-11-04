@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import AboutClient from './AboutClient';
 import { SITE_URL } from '@/lib/old-site/pages';
+import { Breadcrumbs } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'About Us – Lashes by Shazz',
@@ -19,5 +20,10 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutClient />;
+  return (
+    <>
+      <Breadcrumbs trail={[{ name: 'About Us', path: '/about' }]} />
+      <AboutClient />
+    </>
+  );
 }

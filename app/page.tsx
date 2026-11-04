@@ -5,16 +5,17 @@ import Navbar from './components/Navbar';
 import BlendBg from '@/lib/BlendBg';
 import { SiteFooter } from '@/lib/old-site/SiteShell';
 import { BOOKING_URL as lashesBookingUrl, SITE_URL } from '@/lib/old-site/pages';
+import { ORG_ID, SAME_AS } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Lashes by Shazz | Lash Extensions in Nairobi – The Beauty Vault',
+  title: 'Lashes by Shazz | UV Lashes & Lash Extensions in Nairobi, Kenya',
   description:
-    'Lashes by Shazz at The Beauty Vault, Nairobi: classic, hybrid, volume and mega volume lash extensions, refills, microshading, Peruvian wigs and aesthetic treatments.',
+    'Lashes by Shazz, the #1 UV lash parlour and trainers in Kenya. UV lashes from KES 4,060 and classic, hybrid, volume and mega volume lash extensions from KES 2,900, plus refills and lash training in Hurlingham and Nairobi CBD.',
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'Lashes by Shazz | Lash Extensions in Nairobi – The Beauty Vault',
+    title: 'Lashes by Shazz | UV Lashes & Lash Extensions in Nairobi, Kenya',
     description:
-      'Luxury lash extensions, refills, microshading and Peruvian wigs in Kilimani and Nairobi CBD.',
+      'UV lashes, classic to mega volume lash extensions, refills and lash training in Hurlingham and Nairobi CBD.',
     url: SITE_URL,
     siteName: 'Lashes by Shazz',
     locale: 'en_KE',
@@ -66,8 +67,20 @@ const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'Organization',
+      '@id': ORG_ID,
+      name: 'Lashes by Shazz',
+      alternateName: ['Lashes by Shazz Academy', 'The Beauty Vault'],
+      url: SITE_URL,
+      logo: `${SITE_URL}/logos/lashes.png`,
+      description: 'The #1 UV lash parlour and trainers in Kenya, with branches in Hurlingham and Nairobi CBD.',
+      sameAs: SAME_AS,
+    },
+    {
       '@type': 'BeautySalon',
       '@id': `${SITE_URL}/#hurlingham`,
+      parentOrganization: { '@id': ORG_ID },
+      sameAs: SAME_AS,
       name: 'Lashes by Shazz – Hurlingham Branch',
       url: SITE_URL,
       telephone: '+254769781771',
@@ -89,6 +102,8 @@ const localBusinessJsonLd = {
     {
       '@type': 'BeautySalon',
       '@id': `${SITE_URL}/#cbd`,
+      parentOrganization: { '@id': ORG_ID },
+      sameAs: SAME_AS,
       name: 'Lashes by Shazz – CBD Branch',
       url: SITE_URL,
       telephone: '+254792066140',

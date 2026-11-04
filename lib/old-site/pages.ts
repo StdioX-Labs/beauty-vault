@@ -37,9 +37,9 @@ export const OLD_PAGES: OldPage[] = [
   {
     slug: 'faq-page',
     file: 'faq-page',
-    title: 'FAQ – Lashes by Shazz',
+    title: 'UV Lashes & Lash Extension FAQ – Lashes by Shazz, Nairobi',
     description:
-      'How long do lash extensions last, are they safe, and when should you book a refill? Answers to common lash extension questions.',
+      'Are UV lashes safe? How much do UV lashes cost in Kenya, and how long do they last? Answers from Lashes by Shazz, the #1 UV lash parlour and trainers in Kenya.',
     image: '/old-site/faq-page.webp',
     kind: 'page',
   },
@@ -74,9 +74,9 @@ export const OLD_PAGES: OldPage[] = [
   {
     slug: 'lash-extensions',
     file: 'lash-extensions',
-    title: 'Lash Extensions – Lashes by Shazz',
+    title: 'Lash Extensions in Nairobi, Kenya – Classic to Mega Volume | Lashes by Shazz',
     description:
-      'Classic, hybrid, volume and mega volume lash extensions in Nairobi, applied by trained technicians with premium mink lashes.',
+      'Classic, hybrid, volume and mega volume lash extensions in Nairobi from KES 2,900 (VAT included), applied by trained technicians at our Hurlingham and CBD branches.',
     image: '/old-site/lash-extensions.webp',
     kind: 'service',
   },
@@ -172,6 +172,36 @@ export const OLD_PAGES: OldPage[] = [
     kind: 'package',
   },
   // Blog
+  {
+    slug: 'uv-lashes-in-kenya-complete-guide',
+    file: 'uv-lashes-in-kenya-complete-guide',
+    title: 'UV Lashes in Kenya: The Complete Guide (Prices, Safety & Aftercare) – Lashes by Shazz',
+    description:
+      'What are UV lashes, are they safe, and how much do UV lashes cost in Kenya? Prices from KES 4,060, who can wear them, and where to get UV lashes in Nairobi.',
+    image: '/old-site/lash-extensions.webp',
+    kind: 'post',
+    date: '2026-11-04',
+  },
+  {
+    slug: 'uv-lashes-vs-regular-lashes',
+    file: 'uv-lashes-vs-regular-lashes',
+    title: 'UV Lashes vs Regular Lashes: Which Is Better? – Lashes by Shazz',
+    description:
+      'Are UV lashes better than regular lashes? Comfort, safety, retention and Kenya prices compared side by side by Lashes by Shazz in Nairobi.',
+    image: '/old-site/lash-refill-services.webp',
+    kind: 'post',
+    date: '2026-11-04',
+  },
+  {
+    slug: 'how-to-become-a-uv-lash-tech-in-kenya',
+    file: 'how-to-become-a-uv-lash-tech-in-kenya',
+    title: 'How to Become a UV Lash Tech in Kenya – Lashes by Shazz Academy',
+    description:
+      'Is it hard to be a UV lash tech? UV Lash Training in Nairobi for KES 30,000 with a full UV lamp kit, certificate and mentorship, from the #1 UV lash trainers in Kenya.',
+    image: '/old-site/training.webp',
+    kind: 'post',
+    date: '2026-11-04',
+  },
   {
     slug: 'are-lash-extensions-dangerous-the-truth-your-salon-isnt-telling-you',
     file: 'are-lash-extensions-dangerous-the-truth-your-salon-isnt-telling-you',

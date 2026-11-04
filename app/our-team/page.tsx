@@ -4,16 +4,18 @@ import BlendBg from '@/lib/BlendBg';
 import { SiteFooter, SiteNav, BRANCHES } from '@/lib/old-site/SiteShell';
 import { SITE_URL } from '@/lib/old-site/pages';
 import { TECHS } from '@/lib/techs';
+import { Breadcrumbs } from '@/lib/seo';
 
+const TITLE = 'UV Lash Techs in Nairobi – Meet Our Team | Lashes by Shazz';
 const description =
-  'Meet the Lashes by Shazz team: founders Sharon and Evans, and the lash technicians at our Hurlingham and CBD branches in Nairobi.';
+  'Book a UV lash tech near you in Nairobi. Meet the Lashes by Shazz UV lash technicians at our Hurlingham and CBD branches, founded by Sharon and Evans.';
 
 export const metadata: Metadata = {
-  title: 'Our Team – Lashes by Shazz',
+  title: TITLE,
   description,
   alternates: { canonical: `${SITE_URL}/our-team` },
   openGraph: {
-    title: 'Our Team – Lashes by Shazz',
+    title: TITLE,
     description,
     url: `${SITE_URL}/our-team`,
     type: 'website',
@@ -43,6 +45,32 @@ const BRANCH_TEAMS = [
 
 const slugify = (n: string) => n.toLowerCase().replace(/[^a-z]+/g, '-');
 
+// Structured data so search engines read every technician as a UV lash technician
+// at their branch, with a direct booking link. Not shown on the page.
+const BRANCH_LD_ID = { 1: `${SITE_URL}/#cbd`, 2: `${SITE_URL}/#hurlingham` } as const;
+const teamJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': BRANCH_TEAMS.map((b) => ({
+    '@type': 'BeautySalon',
+    '@id': BRANCH_LD_ID[b.id as 1 | 2],
+    name: `Lashes by Shazz – ${b.branch.name}`,
+    description: 'UV lashes and classic, hybrid, volume and mega volume lash extensions in Nairobi, Kenya.',
+    url: `${SITE_URL}/our-team`,
+    telephone: b.branch.tel,
+    address: { '@type': 'PostalAddress', streetAddress: b.branch.address, addressLocality: 'Nairobi', addressCountry: 'KE' },
+    employee: b.techs.map((t) => ({
+      '@type': 'Person',
+      name: t.name,
+      jobTitle: 'UV Lash Technician',
+      description: `${t.name} is a UV lash technician at Lashes by Shazz, ${b.branch.name}, Nairobi. UV lash extensions: classic, hybrid, volume and mega volume.`,
+      knowsAbout: ['UV lash extensions', 'UV lashes', 'Lash extensions', 'Lash refills'],
+      image: `${SITE_URL}/team/${slugify(t.name)}.webp`,
+      url: `${SITE_URL}/book/${t.slug}`,
+      worksFor: { '@id': BRANCH_LD_ID[b.id as 1 | 2] },
+    })),
+  })),
+};
+
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6">
@@ -58,6 +86,8 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamJsonLd) }} />
+      <Breadcrumbs trail={[{ name: 'Our Team', path: '/our-team' }]} />
       <SiteNav />
 
       {/* Hero */}
@@ -124,13 +154,13 @@ export default function TeamPage() {
                     href={`/book/${slug}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Book with ${n}`}
+                    aria-label={`Book UV lashes with ${n}, UV lash tech at the ${b.branch.name}`}
                     className="group block text-center"
                   >
                   <div className="relative mx-auto w-28 h-28 sm:w-36 sm:h-36">
                     <Image
                       src={`/team/${slugify(n)}.webp`}
-                      alt={`${n}, lash technician at the ${b.branch.name}`}
+                      alt={`${n}, UV lash technician at Lashes by Shazz ${b.branch.name}, Nairobi`}
                       fill
                       sizes="144px"
                       className="rounded-full object-cover"
