@@ -1,6 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Navbar from '../components/Navbar';
+import BlendBg from '@/lib/BlendBg';
+import { SiteFooter } from '@/lib/old-site/SiteShell';
 import { useState, useEffect } from 'react';
 
 export default function ReviveAesthetics() {
@@ -15,177 +18,56 @@ export default function ReviveAesthetics() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const services = [
-        {
-            title: 'Teeth Whitening',
-            description: 'Professional teeth whitening for a brighter, more confident smile.',
-            price: 'From KSh 10,000',
-            icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-        },
-        {
-            title: 'Vaginal Tightening',
-            description: 'Safe, consent-based intimate wellness treatment.',
-            price: 'From KSh 5,500',
-            icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
-        },
-        {
-            title: 'Dark Lips Lightening',
-            description: 'Restore natural lip color with advanced treatments.',
-            price: 'From KSh 3,500',
-            icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
-        },
-        {
-            title: 'Tattoo Removal',
-            description: 'Safe laser tattoo removal with visible results.',
-            price: 'From KSh 3,500',
-            icon: 'M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16'
-        },
-        {
-            title: 'Laser Hair Removal',
-            description: 'Permanent hair removal for smooth skin.',
-            price: 'From KSh 3,500',
-            icon: 'M13 10V3L4 14h7v7l9-11h-7z'
-        },
-        {
-            title: 'Acne Treatment',
-            description: 'Advanced treatment for clear, healthy skin.',
-            price: 'From KSh 7,500',
-            icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-        },
-        {
-            title: 'Eyebrow Tattoo Removal',
-            description: 'Precise removal for natural-looking results.',
-            price: 'From KSh 3,500',
-            icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z'
-        },
-        {
-            title: 'Scar Removal',
-            description: 'Diminish scars with laser technology.',
-            price: 'From KSh 3,500',
-            icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
-        },
-        {
-            title: 'Pigmentation Treatment',
-            description: 'Even skin tone and reduce pigmentation.',
-            price: 'From KSh 5,000',
-            icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
-        },
-        {
-            title: 'Skin Tag Removal',
-            description: 'Quick removal of unwanted skin tags.',
-            price: 'From KSh 2,000',
-            icon: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01'
-        },
-        {
-            title: 'Stretch Marks Reduction',
-            description: 'Reduce appearance for smoother skin.',
-            price: 'From KSh 3,500',
-            icon: 'M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'
-        },
-        {
-            title: 'Keloid Reduction',
-            description: 'Advanced keloid treatment.',
-            price: 'From KSh 3,500',
-            icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
-        },
-        {
-            title: 'Birthmark Removal',
-            description: 'Safe birthmark removal.',
-            price: 'From KSh 3,500',
-            icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
-        },
-        {
-            title: 'Skin Mole Removal',
-            description: 'Professional mole removal.',
-            price: 'From KSh 2,000',
-            icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
-        },
-        {
-            title: 'Monthly Facial',
-            description: 'Regular facial for healthy skin.',
-            price: 'From KSh 2,500',
-            icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-        },
-        {
-            title: 'Hydro Facial',
-            description: 'Deep cleansing hydration facial.',
-            price: 'From KSh 3,500',
-            icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
-        },
-        {
-            title: 'Carbon Facial',
-            description: 'Carbon laser facial for rejuvenation.',
-            price: 'From KSh 5,000',
-            icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
-        },
-        {
-            title: 'Skin Tightening',
-            description: 'RF/HIFU for firmer skin.',
-            price: 'Contact for pricing',
-            icon: 'M13 10V3L4 14h7v7l9-11h-7z'
-        }
+    // Revive Aesthetics price list (KES). "from" = starting price, "pack" = price for 3 sessions.
+    const OFFER_PERCENT = 20; // current offer: 20% off all Revive services
+    const sale = (n: number) => Math.round(n * (100 - OFFER_PERCENT) / 100);
+    const offerOn = OFFER_PERCENT > 0;
+    const fmt = (n: number) => `KES ${n.toLocaleString('en-KE')}`;
+    const treatments = [
+        { name: 'Teeth whitening', price: 10000, note: 'per session', pack: 25000 },
+        { name: 'Permanent vaginal tightening', price: 5500, note: 'per session', pack: 15000 },
+        { name: 'Dark lips removal', price: 3500, note: 'per session', pack: 9000 },
+        { name: 'Tattoo removal', price: 3500, from: true },
+        { name: 'Permanent laser hair removal', price: 3500, from: true },
+        { name: 'Pimple / acne treatment', price: 7500, note: 'per session', pack: 20000 },
+        { name: 'Eyebrows tattoo removal', price: 3500, note: 'per session', pack: 9000 },
+        { name: 'Scar removal', price: 3500, from: true },
+        { name: 'Sun burn / pigmentation treatment', price: 5000, note: 'per session', pack: 12000 },
+        { name: 'Skin tag removal', price: 2000, from: true },
+        { name: 'Stretch marks removal', price: 3500, from: true },
+        { name: 'Keloids removal', price: 3500, from: true },
+        { name: 'Birthmark removal', price: 3500, from: true },
+        { name: 'Skin mole removal', price: 2000, from: true },
+    ];
+    const facials = [
+        { name: 'Monthly facial', price: 3500, pack: 9000 },
+        { name: 'Hydra facial', price: 5000, pack: 12000 },
+        { name: 'Carbon facial', price: 7500, pack: 19500 },
+        { name: 'Eye spa', price: 2500 },
+        { name: 'Skin analysis', price: 500 },
     ];
 
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
-            {/* Launch Announcement Banner */}
-            <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-white/10 py-2 overflow-hidden">
-                <div className="animate-marquee whitespace-nowrap">
-                    <span className="text-xs sm:text-sm tracking-wider uppercase text-white/90 font-light">
-                        🚀 LAUNCHING FEBRUARY 28TH | REVIVE AESTHETICS - Where Your Transformation Begins | LAUNCHING FEBRUARY 28TH 🚀
-                    </span>
-                </div>
-            </div>
-
+        <div className="min-h-screen bg-[#04210d] text-white overflow-hidden">
             {/* Floating Navigation */}
-            <nav className={`fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${isScrolled ? 'scale-95' : ''} px-4 w-full max-w-[95vw] sm:w-auto`}>
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 shadow-2xl">
-                    <div className="flex items-center justify-between sm:justify-center gap-3 sm:gap-8">
-                        <a
-                            href="/"
-                            className="flex items-center gap-1.5 sm:gap-2 text-white/80 hover:text-white transition-colors group"
-                        >
-                            <svg
-                                className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:-translate-x-1 transition-transform"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            <span className="text-[10px] sm:text-xs tracking-wider uppercase font-medium">Home</span>
-                        </a>
-
-                        <a href="#services" className="hidden sm:inline text-xs tracking-wider uppercase font-medium text-white/80 hover:text-white transition-colors">
-                            Services
-                        </a>
-                        <a href="/about" className="hidden sm:inline text-xs tracking-wider uppercase font-medium text-white/80 hover:text-white transition-colors">
-                            About
-                        </a>
-                        <a
-                            href={bookingUrl}
-                            className="px-3.5 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-white to-gray-200 text-gray-900 rounded-full hover:shadow-lg hover:shadow-white/50 transition-all duration-300 text-[10px] sm:text-xs tracking-wider uppercase font-semibold whitespace-nowrap"
-                        >
-                            Book Now
-                        </a>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-0">
                 {/* Background with Overlay */}
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#031a0a] via-[#0b3d1e] to-[#031a0a]" />
+                    <BlendBg src="/bg/home-aesthetics.webp" side="right" opacity={0.55} />
+                    <BlendBg src="/bg/about-hero.webp" side="left" opacity={0.3} className="hidden sm:block" />
                     {/* Artistic overlay effects */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/10 mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#1d7a3e]/30 via-transparent to-[#1d7a3e]/15 mix-blend-overlay" />
                 </div>
 
                 {/* Floating geometric shapes */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse" />
-                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-                    <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+                    <div className="absolute top-20 left-10 w-72 h-72 bg-[#1d7a3e]/25 rounded-full blur-3xl animate-pulse" />
+                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#1d7a3e]/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+                    <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-[#1d7a3e]/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-center">
@@ -203,13 +85,13 @@ export default function ReviveAesthetics() {
 
                     {/* Decorative line */}
                     <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-white" />
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full" />
-                        <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-gray-300 font-light px-2">
+                        <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#c08a35] rounded-full" />
+                        <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#e0bd74] font-light px-2">
                             Afro-Urban Beauty & Wellbeing Redefined
                         </p>
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full" />
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-white" />
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#c08a35] rounded-full" />
+                        <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-[family-name:var(--font-italianno)] text-white mb-4 sm:mb-6 drop-shadow-2xl leading-tight">
@@ -223,10 +105,14 @@ export default function ReviveAesthetics() {
                         Where your transformation begins.
                     </p>
 
+                    {offerOn && (<a href="#services" className="inline-block mb-8 px-5 py-2 rounded-full border border-[#e0bd74]/60 bg-[#0b3d1e]/70 backdrop-blur text-xs tracking-[0.25em] uppercase text-white">
+                        {OFFER_PERCENT}% off all services
+                    </a>)}
+
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
                         <a
                             href={bookingUrl}
-                            className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-white to-gray-200 text-gray-900 rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/50 hover:scale-105"
+                            className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#f7f9ee] to-[#e9d9a8] text-[#052b10] rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/50 hover:scale-105"
                         >
                             <span className="relative z-10 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
                                 Book Consultation
@@ -234,7 +120,7 @@ export default function ReviveAesthetics() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#e9d9a8] to-[#f7f9ee] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
                         </a>
 
                         <a
@@ -258,18 +144,19 @@ export default function ReviveAesthetics() {
 
             {/* About Section */}
             <section id="about" className="relative py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#031a0a] via-[#0b3d1e] to-[#031a0a]" />
+                <BlendBg src="/bg/page-package.webp" side="left" opacity={0.3} />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
+                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
+                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
+                            <p className="text-xs tracking-[0.4em] uppercase text-[#e0bd74] font-light">
                                 About REVIVE
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
+                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
+                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
                             Your Safe Space<br />to Glow
@@ -293,8 +180,8 @@ export default function ReviveAesthetics() {
                             { icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', title: 'Afro-Urban Touch', desc: 'Tailored for African skin with care' }
                         ].map((feature, index) => (
                             <div key={index} className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-white/30 transition-all duration-500 text-center">
-                                <div className="w-12 h-12 bg-gradient-to-br from-white to-gray-300 rounded-full flex items-center justify-center mb-4 mx-auto">
-                                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-12 h-12 bg-gradient-to-br from-[#e9c27a] to-[#c08a35] rounded-full flex items-center justify-center mb-4 mx-auto">
+                                    <svg className="w-6 h-6 text-[#052b10]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
                                     </svg>
                                 </div>
@@ -318,18 +205,19 @@ export default function ReviveAesthetics() {
 
             {/* Services Section */}
             <section id="services" className="relative py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#031a0a] via-[#0b3d1e] to-[#031a0a]" />
+                <BlendBg src="/bg/page-post.webp" side="right" opacity={0.22} />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
+                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
+                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
+                            <p className="text-xs tracking-[0.4em] uppercase text-[#e0bd74] font-light">
                                 Our Services
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
+                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
+                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Transform Your<br />Beauty Journey
@@ -339,57 +227,89 @@ export default function ReviveAesthetics() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {services.map((service, index) => (
-                            <div key={index} className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-white/30 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20">
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-                                <div className="relative">
-                                    <div className="mb-6">
-                                        <div className="w-12 h-12 bg-gradient-to-br from-white to-gray-300 rounded-full flex items-center justify-center mb-4">
-                                            <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={service.icon} />
-                                            </svg>
-                                        </div>
-                                        <h3 className="text-2xl font-light text-white mb-3 tracking-wide">{service.title}</h3>
-                                        <p className="text-white/60 mb-6 leading-relaxed text-sm font-light">
-                                            {service.description}
-                                        </p>
-                                    </div>
-                                    <div className="border-t border-white/10 pt-6">
-                                        <div className="text-2xl font-light text-white mb-4">
-                                            {service.price}
-                                        </div>
-                                        <a
-                                            href={bookingUrl}
-                                            className="inline-flex items-center gap-2 text-white hover:text-gray-300 font-light tracking-wider uppercase text-xs group-hover:gap-3 transition-all duration-300"
-                                        >
-                                            Book Now
-                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
+                    {/* Offer banner */}
+                    {offerOn && (
+                    <div className="relative mb-14 overflow-hidden rounded-3xl border border-[#e0bd74]/60 bg-gradient-to-r from-[#0f5a2a] via-[#18823f] to-[#0f5a2a] px-6 py-8 sm:px-12 sm:py-10 text-center shadow-[0_20px_60px_-15px_rgba(24,130,63,0.6)]">
+                        <div aria-hidden className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-[#e9c27a]/25 blur-3xl" />
+                        <div aria-hidden className="absolute -bottom-16 -right-16 w-56 h-56 rounded-full bg-[#e9c27a]/25 blur-3xl" />
+                        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
+                            <p className="font-[family-name:var(--font-italianno)] text-7xl sm:text-8xl leading-none text-[#f6e3b0]">{OFFER_PERCENT}% off</p>
+                            <div className="text-center sm:text-left">
+                                <p className="text-xs tracking-[0.35em] uppercase text-[#f6e3b0]">Special offer</p>
+                                <p className="mt-2 text-xl sm:text-2xl font-light text-white">On all Revive Aesthetics services</p>
+                                <p className="mt-1 text-sm text-white/85">The prices below already include the discount.</p>
                             </div>
-                        ))}
+                        </div>
+                    </div>
+                    )}
+
+                    <div className="grid gap-12 lg:grid-cols-5">
+                        <div className="lg:col-span-3">
+                            <h3 className="text-xs tracking-[0.3em] uppercase text-[#e0bd74] mb-6">Treatments</h3>
+                            <ul className="divide-y divide-white/10 border-y border-white/10">
+                                {treatments.map((t) => (
+                                    <li key={t.name} className="flex items-baseline justify-between gap-6 py-4">
+                                        <span className="text-white font-light">{t.name}</span>
+                                        <span className="text-right whitespace-nowrap">
+                                            {offerOn && <span className="text-white/40 line-through text-sm mr-2">{t.from ? 'From ' : ''}{fmt(t.price)}</span>}
+                                            <span className="text-white">{t.from ? 'From ' : ''}{fmt(sale(t.price))}</span>
+                                            {t.note && <span className="text-white/45 text-xs"> {t.note}</span>}
+                                            {t.pack && (
+                                                <span className="block text-xs text-white/55">
+                                                    {offerOn && <span className="line-through text-white/35 mr-1">{fmt(t.pack)}</span>}
+                                                    {fmt(sale(t.pack))} for 3 sessions
+                                                </span>
+                                            )}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="lg:col-span-2">
+                            <h3 className="text-xs tracking-[0.3em] uppercase text-[#e0bd74] mb-6">Facials</h3>
+                            <ul className="divide-y divide-white/10 border-y border-white/10">
+                                {facials.map((f) => (
+                                    <li key={f.name} className="flex items-baseline justify-between gap-6 py-4">
+                                        <span className="text-white font-light">{f.name}</span>
+                                        <span className="text-right whitespace-nowrap">
+                                            {offerOn && <span className="text-white/40 line-through text-sm mr-2">{fmt(f.price)}</span>}
+                                            <span className="text-white">{fmt(sale(f.price))}</span>
+                                            {f.pack && (
+                                                <span className="block text-xs text-white/55">
+                                                    {offerOn && <span className="line-through text-white/35 mr-1">{fmt(f.pack)}</span>}
+                                                    {fmt(sale(f.pack))} for 3 sessions
+                                                </span>
+                                            )}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a
+                                href={bookingUrl}
+                                className="mt-8 inline-block px-8 py-4 rounded-full bg-gradient-to-r from-[#f7f9ee] to-[#e9d9a8] text-[#052b10] text-xs tracking-[0.2em] uppercase font-semibold"
+                            >
+                                Book Consultation
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Who We Serve Section */}
             <section className="relative py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#031a0a] via-[#0b3d1e] to-[#031a0a]" />
+                <BlendBg src="/bg/page-service.webp" side="right" opacity={0.3} />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
+                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
+                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
+                            <p className="text-xs tracking-[0.4em] uppercase text-[#e0bd74] font-light">
                                 Who We Serve
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
+                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
+                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Created for<br />You
@@ -418,7 +338,8 @@ export default function ReviveAesthetics() {
 
             {/* Booking Section */}
             <section id="book" className="relative py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#031a0a] via-[#0b3d1e] to-[#031a0a]" />
+                <BlendBg src="/bg/home-aesthetics.webp" side="left" opacity={0.3} />
 
                 <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center">
                     <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-12 sm:p-16">
@@ -431,19 +352,19 @@ export default function ReviveAesthetics() {
                         
                         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
                             <a
-                                href="tel:+254"
-                                className="group px-10 py-5 bg-gradient-to-r from-white to-gray-200 text-gray-900 rounded-full hover:shadow-2xl hover:shadow-white/50 transition-all duration-500 hover:scale-105"
+                                href="tel:+254799715196"
+                                className="group px-10 py-5 bg-gradient-to-r from-[#f7f9ee] to-[#e9d9a8] text-[#052b10] rounded-full hover:shadow-2xl hover:shadow-white/50 transition-all duration-500 hover:scale-105"
                             >
                                 <span className="text-sm tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
-                                    Call Now
+                                    Call 0799 715 196
                                 </span>
                             </a>
                             
                             <a
-                                href="https://wa.me/"
+                                href="https://wa.me/254799715196"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-10 py-5 border border-white/30 backdrop-blur-sm text-white rounded-full transition-all duration-500 hover:bg-white/10 hover:border-white/50 hover:shadow-xl hover:scale-105"
@@ -460,7 +381,7 @@ export default function ReviveAesthetics() {
                         <div className="border-t border-white/10 pt-8">
                             <p className="text-white/60 font-light mb-4">Visit us in Nairobi</p>
                             <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
-                                <span>📍 Nairobi, Kenya</span>
+                                <span>B12, Silverpool Suite, Jabavu Lane, Nairobi</span>
                                 <span>•</span>
                                 <span>Mon - Sat: 9AM - 7PM</span>
                             </div>
@@ -470,19 +391,7 @@ export default function ReviveAesthetics() {
             </section>
 
             {/* Footer */}
-            <footer className="relative border-t border-white/10 py-12">
-                <div className="absolute inset-0 bg-black" />
-                <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
-                    <div className="text-center">
-                        <p className="text-white/60 font-light text-sm mb-4">
-                            REVIVE Aesthetics © 2026. All rights reserved.
-                        </p>
-                        <p className="text-white/40 font-light text-xs italic">
-                            Glow from within.
-                        </p>
-                    </div>
-                </div>
-            </footer>
+            <SiteFooter />
         </div>
     );
 }

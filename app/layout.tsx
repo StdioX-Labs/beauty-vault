@@ -19,15 +19,22 @@ const italianno = Italianno({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lashesbyshazz.com"),
   title: "The Beauty Vault | Premium Beauty & Wellness Services in Nairobi",
   description: "Experience luxury beauty services in Nairobi. From premium lash extensions by Lashes by Shazz, exquisite wigs and hair accessories by Shasha Hair, to advanced aesthetic treatments by Revive Aesthetics. Your destination for beauty excellence.",
   keywords: "beauty salon Nairobi, lash extensions Kenya, premium wigs Nairobi, aesthetic treatments Kenya, Lashes by Shazz, Shasha Hair Wigs, Revive Aesthetics, beauty services Nairobi",
   authors: [{ name: "The Beauty Vault" }],
+  icons: {
+    icon: [{ url: "/icons/lashesbyshazz-round.png", type: "image/png", sizes: "512x512" }],
+    shortcut: "/icons/lashesbyshazz-round.png",
+    apple: "/icons/lashesbyshazz-round-apple.png",
+  },
   openGraph: {
     title: "The Beauty Vault | Premium Beauty & Wellness Services",
     description: "Experience luxury beauty services in Nairobi. Lash extensions, premium wigs, and advanced aesthetic treatments.",
     type: "website",
     locale: "en_KE",
+    images: [{ url: "/bg/home-hero.webp" }],
   },
 };
 

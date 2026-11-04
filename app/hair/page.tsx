@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import Navbar from '../components/Navbar';
+import { SiteFooter } from '@/lib/old-site/SiteShell';
 import { useState, useEffect } from 'react';
 
 export default function ShashaHairSalon() {
@@ -83,39 +85,7 @@ export default function ShashaHairSalon() {
     return (
         <div className="min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
             {/* Floating Navigation */}
-            <nav className={`fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${isScrolled ? 'scale-95' : ''} px-4 w-full max-w-[95vw] sm:w-auto`}>
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 shadow-2xl">
-                    <div className="flex items-center justify-between sm:justify-center gap-3 sm:gap-8">
-                        <a
-                            href="/"
-                            className="flex items-center gap-1.5 sm:gap-2 text-white/80 hover:text-white transition-colors group"
-                        >
-                            <svg
-                                className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:-translate-x-1 transition-transform"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            <span className="text-[10px] sm:text-xs tracking-wider uppercase font-medium">Home</span>
-                        </a>
-
-                        <a href="#collection" className="hidden sm:inline text-xs tracking-wider uppercase font-medium text-white/80 hover:text-white transition-colors">
-                            Collection
-                        </a>
-                        <a href="/about" className="hidden sm:inline text-xs tracking-wider uppercase font-medium text-white/80 hover:text-white transition-colors">
-                            About
-                        </a>
-                        <a
-                            href="#shop"
-                            className="px-3.5 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-amber-200 to-yellow-300 text-gray-900 rounded-full hover:shadow-lg hover:shadow-amber-300/50 transition-all duration-300 text-[10px] sm:text-xs tracking-wider uppercase font-semibold whitespace-nowrap"
-                        >
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-0">
@@ -518,7 +488,7 @@ export default function ShashaHairSalon() {
                             </a>
 
                             <a
-                                href="tel:+254"
+                                href="tel:+254769781771"
                                 className="px-10 py-5 border border-white/30 backdrop-blur-sm text-white rounded-full transition-all duration-500 hover:bg-white/10 hover:border-white/50 hover:shadow-xl hover:scale-105"
                             >
                                 <span className="text-sm tracking-[0.2em] uppercase font-medium flex items-center justify-center gap-2">
@@ -543,19 +513,7 @@ export default function ShashaHairSalon() {
             </section>
 
             {/* Footer */}
-            <footer className="relative border-t border-white/10 py-12">
-                <div className="absolute inset-0 bg-black" />
-                <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
-                    <div className="text-center">
-                        <p className="text-white/60 font-light text-sm mb-4">
-                            SHASHA HAIR © 2026. All rights reserved.
-                        </p>
-                        <p className="text-white/40 font-light text-xs italic">
-                            Effortless Hair. Instant Confidence.
-                        </p>
-                    </div>
-                </div>
-            </footer>
+            <SiteFooter />
         </div>
     );
 }

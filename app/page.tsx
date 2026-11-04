@@ -1,92 +1,191 @@
-'use client';
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import Navbar from './components/Navbar';
+import BlendBg from '@/lib/BlendBg';
+import { SiteFooter } from '@/lib/old-site/SiteShell';
+import { BOOKING_URL as lashesBookingUrl, SITE_URL } from '@/lib/old-site/pages';
 
-import Image from "next/image";
-import Navbar from "./components/Navbar";
+export const metadata: Metadata = {
+  title: 'Lashes by Shazz | Lash Extensions in Nairobi – The Beauty Vault',
+  description:
+    'Lashes by Shazz at The Beauty Vault, Nairobi: classic, hybrid, volume and mega volume lash extensions, refills, microshading, Peruvian wigs and aesthetic treatments.',
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    title: 'Lashes by Shazz | Lash Extensions in Nairobi – The Beauty Vault',
+    description:
+      'Luxury lash extensions, refills, microshading and Peruvian wigs in Kilimani and Nairobi CBD.',
+    url: SITE_URL,
+    siteName: 'Lashes by Shazz',
+    locale: 'en_KE',
+    type: 'website',
+    images: [{ url: '/old-site/lash-extensions.webp' }],
+  },
+};
+
+// Copy carried over from the old lashesbyshazz.com homepage.
+const lashServices = [
+  {
+    href: '/lashes#uv-lashes',
+    title: 'UV Lash Extensions',
+    badge: 'The No. 1 parlour for UV lashes in Nairobi',
+    text: 'Instant curing, no irritation, no fumes and 4 to 6 weeks retention. Sets from KES 4,060.',
+  },
+  { href: '/lash-extensions', title: 'Lash Extensions', text: 'Classic to mega volume sets, customised to your eye shape and style.' },
+  { href: '/lash-refill-services', title: 'Lash Refills', text: 'Keep your set full with a refill within 21 days of your last appointment.' },
+  { href: '/microshading', title: 'Microshading', text: 'Soft, shaded semi-permanent brows for a naturally fuller look.' },
+  { href: '/peruvian-wigs', title: 'Peruvian Wigs', text: '100% premium Peruvian hair with undetectable HD lace, pre-plucked and ready to wear.' },
+  { href: '/beauty-wellness', title: 'Beauty & Wellness IV Drips', text: 'Hydration, brightening and anti-ageing drips that work from the inside out.' },
+  { href: '/house-calls', title: 'House Calls', text: 'The full salon experience at your home, hotel or event.' },
+];
+
+const lashPackages = [
+  { href: '/luxury-lash-brow-package', title: 'Student Slay Pass' },
+  { href: '/executive-glow-plan', title: 'Executive Glow Plan' },
+  { href: '/party-bridal-squad-glam', title: 'Party & Bridal Squad Glam' },
+  { href: '/luxe-bridal-beauty-bundle', title: 'Luxe Bridal Beauty Bundle' },
+  { href: '/lash-loyalty-luxe-plan', title: 'Lash Loyalty Luxe Plan' },
+];
+
+const reviews = [
+  {
+    name: 'Lyndsae’ Peele',
+    quote: 'Amazing house call experience all the way around. This was the best lash job we’ve had. Very light, very neat, and very natural.',
+  },
+  {
+    name: 'Salma Hassern',
+    quote: 'It was my first time doing lash extensions. I felt so comfortable and really happy with my lashes. Thanks to Ruth.',
+  },
+  {
+    name: 'Happy client',
+    quote: 'Convenient online booking, slippers, blankets, wifi. Caro removed my old lashes so gently and gave me a new set even more gently. I found my new lash place.',
+  },
+];
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BeautySalon',
+      '@id': `${SITE_URL}/#hurlingham`,
+      name: 'Lashes by Shazz – Hurlingham Branch',
+      url: SITE_URL,
+      telephone: '+254769781771',
+      image: `${SITE_URL}/bg/home-hero.webp`,
+      priceRange: 'KES',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Silverpool Suite, Jabavu Lane',
+        addressLocality: 'Nairobi',
+        addressCountry: 'KE',
+      },
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
+      },
+    },
+    {
+      '@type': 'BeautySalon',
+      '@id': `${SITE_URL}/#cbd`,
+      name: 'Lashes by Shazz – CBD Branch',
+      url: SITE_URL,
+      telephone: '+254792066140',
+      image: `${SITE_URL}/bg/home-hero.webp`,
+      priceRange: 'KES',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Absa Towers, Lower Ground, Loita Street',
+        addressLocality: 'Nairobi',
+        addressCountry: 'KE',
+      },
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
+      },
+    },
+  ],
+};
 
 export default function Home() {
   const bookingUrl = 'https://booking.revive.co.ke/';
 
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-zinc-50 to-white">
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2l1.5 6 6 1.5-6 1.5-1.5 6-1.5-6-6-1.5 6-1.5z' fill='black'/%3E%3C/svg%3E")`,
-            backgroundSize: '40px 40px'
-          }} />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div aria-hidden className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/bg/home-hero.webp')" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-pink-300/20 via-transparent to-rose-300/20 mix-blend-overlay" />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 py-32 text-center">
-          {/* Main Heading */}
-          <div className="space-y-8">
-            <div className="inline-block">
-              <div className="h-px w-20 bg-black mx-auto mb-8" />
-              <p className="text-sm tracking-[0.3em] uppercase text-zinc-600 mb-6">
-                Welcome To
-              </p>
-            </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 sm:py-32 text-center">
+          <div className="mb-8 sm:mb-10 flex justify-center">
+            <Image
+              src="/logos/lashes.png"
+              alt="Lashes by Shazz"
+              width={500}
+              height={150}
+              className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto drop-shadow-2xl"
+              style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(290deg)' }}
+              priority
+            />
+          </div>
 
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-[family-name:var(--font-italianno)] text-black mb-6 animate-[fadeIn_1s_ease-out]">
-              The Beauty Vault
-            </h1>
+          <p className="text-sm sm:text-base tracking-[0.35em] uppercase text-white/80 font-light mb-2">Welcome to</p>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-[family-name:var(--font-italianno)] text-white drop-shadow-2xl leading-tight">
+            Lashes by Shazz
+          </h1>
 
-            <div className="max-w-2xl mx-auto space-y-6">
-              <p className="text-xl sm:text-2xl md:text-3xl font-serif text-zinc-800 leading-relaxed">
-                Where Luxury Meets Excellence
-              </p>
+          <div className="flex items-center justify-center gap-2 sm:gap-4 mt-4 mb-8 sm:mb-10">
+            <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-pink-300" />
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-300 rounded-full" />
+            <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-pink-200 font-light px-2">
+              A product of The Beauty Vault
+            </p>
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-300 rounded-full" />
+            <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-pink-300" />
+          </div>
 
-              <p className="text-base sm:text-lg text-zinc-600 max-w-xl mx-auto leading-relaxed">
-                Discover the pinnacle of beauty and wellness services. From luxurious lashes to transformative aesthetics, we deliver an unparalleled experience in every detail.
-              </p>
-            </div>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10 sm:mb-12 font-light px-4">
+            Luxury lash extensions, premium wigs and advanced aesthetic treatments under one roof in Nairobi.
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-              <a
-                href="#services"
-                className="group relative px-8 py-4 bg-black text-white rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
-              >
-                <span className="relative z-10 text-sm tracking-wider uppercase font-medium">
-                  Explore Services
-                </span>
-                <div className="absolute inset-0 bg-zinc-800 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-              </a>
-
-              <a
-                href={bookingUrl}
-                className="px-8 py-4 border-2 border-black text-black rounded-full transition-all duration-300 hover:bg-black hover:text-white hover:shadow-xl hover:scale-105"
-              >
-                <span className="text-sm tracking-wider uppercase font-medium">
-                  Book Appointment
-                </span>
-              </a>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+            <a
+              href={lashesBookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 rounded-full text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold transition-all duration-500 hover:shadow-2xl hover:shadow-pink-300/50 hover:scale-105"
+            >
+              Book Appointment
+            </a>
+            <a
+              href="#lashes"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border border-white/30 backdrop-blur-sm text-white rounded-full text-xs sm:text-sm tracking-[0.2em] uppercase font-medium transition-all duration-500 hover:bg-white/10 hover:border-white/50"
+            >
+              Explore Services
+            </a>
           </div>
         </div>
       </section>
 
       {/* Lashes By Shazz Section */}
-      <section id="lashes" className="relative min-h-screen bg-black py-24 sm:py-32 overflow-hidden">
-
-
-        {/* Gradient Overlays */}
+      <section id="lashes" className="relative bg-black py-20 sm:py-28 overflow-hidden">
+        <BlendBg src="/bg/home-lashes.webp" side="left" opacity={0.45} />
+        <BlendBg src="/bg/page-service.webp" side="right" opacity={0.3} className="hidden md:block lg:w-[40%]" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
-          {/* Two Column Layout on Desktop */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-            {/* Left Column - Content */}
-            <div className="text-center lg:text-left">
-
-
-              {/* Lashes Logo */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+            <div className="lg:col-span-2 text-center lg:text-left lg:sticky lg:top-28">
               <div className="mb-8 flex justify-center lg:justify-start">
                 <Image
                   src="/logos/lashes.png"
@@ -94,225 +193,208 @@ export default function Home() {
                   width={300}
                   height={100}
                   className="h-16 sm:h-20 md:h-24 w-auto brightness-0 invert"
-                  priority
                 />
               </div>
-
-              <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/60 font-light mb-6">
-                Premier Lash Artistry
+              <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-pink-200/80 font-light mb-4">
+                Lash Extensions in Nairobi
               </p>
-
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
-                Lashes By Shazz
+              <h2 className="text-5xl sm:text-6xl font-[family-name:var(--font-italianno)] text-white mb-6">
+                Our Services
               </h2>
-
-              <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10">
-                Experience the art of luxury lash extensions. Each set is meticulously crafted to enhance your natural beauty with precision, care, and unmatched expertise.
+              <p className="text-base sm:text-lg text-white/75 leading-relaxed mb-8">
+                We are passionate about enhancing beauty through luxury and precision. Our studio is a haven for Queens
+                who deserve the very best in lash extensions and beauty treatments, using modern lashing techniques
+                and the highest standards of quality.
               </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
+                  href={lashesBookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-7 py-3.5 bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 rounded-full text-sm tracking-wider uppercase font-semibold hover:shadow-xl hover:shadow-pink-300/30 transition"
+                >
+                  Book Lashes
+                </a>
+                <Link
                   href="/lashes"
-                  className="group relative px-8 py-4 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105"
+                  className="px-7 py-3.5 border border-white/30 text-white rounded-full text-sm tracking-wider uppercase font-medium hover:bg-white/10 transition"
                 >
-                  <span className="relative z-10 text-sm tracking-wider uppercase font-medium flex items-center justify-center gap-2">
-                    Discover Lashes
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                  <div className="absolute inset-0 bg-white/90 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-                </a>
-
-                <a
-                  href="/lashes#services"
-                  className="group px-8 py-4 border-2 border-white/30 text-white rounded-full transition-all duration-500 hover:border-white hover:bg-white/10 hover:shadow-xl hover:scale-105"
-                >
-                  <span className="text-sm tracking-wider uppercase font-medium flex items-center justify-center gap-2">
-                    View Services
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </a>
+                  Discover Lashes
+                </Link>
               </div>
             </div>
 
-            {/* Right Column - Features */}
-            <div className="space-y-6">
-              {/* Feature 1 */}
-              <div className="group p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:bg-white/5 backdrop-blur-sm">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all duration-500">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl sm:text-2xl font-serif text-white mb-2">Premium Quality</h3>
-                    <p className="text-white/60 leading-relaxed">
-                      Handcrafted with the finest materials for stunning, long-lasting results
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="lg:col-span-3">
+              <ul className="divide-y divide-white/10 border-y border-white/10">
+                {lashServices.map((s) => (
+                  <li key={s.href}>
+                    <Link href={s.href} className="group flex items-start justify-between gap-6 py-5">
+                      <div>
+                        {'badge' in s && s.badge && (
+                          <p className="mb-1 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-pink-300">{s.badge}</p>
+                        )}
+                        <h3 className="text-xl sm:text-2xl font-serif text-white group-hover:text-pink-200 transition-colors">{s.title}</h3>
+                        <p className="mt-1 text-sm sm:text-base text-white/55 leading-relaxed">{s.text}</p>
+                      </div>
+                      <span aria-hidden className="mt-2 text-white/40 group-hover:text-pink-200 group-hover:translate-x-1 transition">→</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-              {/* Feature 2 */}
-              <div className="group p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:bg-white/5 backdrop-blur-sm">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all duration-500">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl sm:text-2xl font-serif text-white mb-2">Expert Application</h3>
-                    <p className="text-white/60 leading-relaxed">
-                      Skilled artistry with years of experience in lash enhancement
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="group p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:bg-white/5 backdrop-blur-sm">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all duration-500">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl sm:text-2xl font-serif text-white mb-2">Personalized Care</h3>
-                    <p className="text-white/60 leading-relaxed">
-                      Customized designs tailored to your unique eye shape and style
-                    </p>
-                  </div>
-                </div>
+              <p className="mt-10 text-xs tracking-[0.3em] uppercase text-white/50">Our packages</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {lashPackages.map((p) => (
+                  <Link
+                    key={p.href}
+                    href={p.href}
+                    className="px-4 py-2 rounded-full border border-white/15 text-sm text-white/80 hover:border-pink-200 hover:text-pink-100 transition"
+                  >
+                    {p.title}
+                  </Link>
+                ))}
               </div>
             </div>
-
           </div>
+
+          {/* Reviews */}
+          <div className="mt-24 grid gap-6 md:grid-cols-3">
+            {reviews.map((r) => (
+              <figure key={r.name} className="p-6 rounded-2xl border border-white/10 bg-white/[0.03]">
+                <blockquote className="text-white/75 leading-relaxed">&ldquo;{r.quote}&rdquo;</blockquote>
+                <figcaption className="mt-4 text-sm text-pink-200">{r.name}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Academy */}
+      <section id="academy" className="relative bg-black py-20 sm:py-28 overflow-hidden border-t border-white/5">
+        <BlendBg src="/bg/training-hands.webp" side="left" opacity={0.4} />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:pl-[50%]">
+          <Image
+            src="/logos/lashes.png"
+            alt="Lashes by Shazz Academy"
+            width={500}
+            height={218}
+            className="h-14 sm:h-16 w-auto mb-6"
+            style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(290deg)' }}
+          />
+          <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-pink-200 font-light">Lashes by Shazz Academy</p>
+          <h2 className="mt-4 text-5xl sm:text-6xl font-[family-name:var(--font-italianno)] text-white">Become a lash tech</h2>
+          <p className="mt-5 text-white/70 font-light leading-relaxed max-w-xl">
+            Train with the No. 1 UV lash parlour and trainers in Kenya. Start with the Beginner Individual Lashes Course,
+            or learn UV lashes in a 5-day intensive that runs every week.
+          </p>
+          <p className="mt-3 text-sm text-white/50">Classes run 8am to 2pm, Friday to Saturday · Absa Towers, Nairobi CBD</p>
+          <Link href="/training" className="mt-8 inline-block px-8 py-4 rounded-full bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 text-xs tracking-[0.2em] uppercase font-semibold">
+            Explore the Academy
+          </Link>
+        </div>
+      </section>
+
+      {/* Lash Tribe Africa */}
+      <section id="lash-tribe" className="relative bg-black py-20 sm:py-28 overflow-hidden border-t border-white/5">
+        <BlendBg src="/bg/lashtribe-supplies.webp" side="right" opacity={0.6} />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
+          <div className="max-w-2xl">
+            <Image
+              src="/logos/lashtribe.png"
+              alt="Lash Tribe Africa"
+              width={256}
+              height={256}
+              className="w-20 h-20 sm:w-24 sm:h-24"
+            />
+            <p className="mt-6 text-[10px] sm:text-xs tracking-[0.4em] uppercase text-pink-200 font-light">For lash technicians</p>
+            <h2 className="mt-4 text-5xl sm:text-6xl font-[family-name:var(--font-italianno)] text-white">Lash Tribe Africa</h2>
+            <p className="mt-5 text-white/70 font-light leading-relaxed">
+              Everything a lash tech needs to grow, in one place.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 max-w-4xl">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+              <p className="text-xs tracking-[0.3em] uppercase text-pink-200">Wholesale</p>
+              <h3 className="mt-3 text-2xl font-light text-white">Lash supplies, direct from source</h3>
+              <p className="mt-3 text-white/65 leading-relaxed">
+                Get your lashes and tools at ridiculously low prices, far below market rates, with unbeatable quality
+                because we buy direct from the source.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+              <p className="text-xs tracking-[0.3em] uppercase text-pink-200">Self-paced academy</p>
+              <h3 className="mt-3 text-2xl font-light text-white">Turn your skill into a business</h3>
+              <p className="mt-3 text-white/65 leading-relaxed">
+                Learn at your own pace with courses on lash techniques and the lash business, and grow your skill into
+                a profitable, thriving business.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://lashtribeafrica.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10 inline-block px-8 py-4 rounded-full bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 text-xs tracking-[0.2em] uppercase font-semibold"
+          >
+            Visit Lash Tribe Africa
+          </a>
         </div>
       </section>
 
       {/* Shasha Hair Wigs Section */}
-      <section id="hair-wigs" className="relative min-h-screen bg-white py-24 sm:py-32 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white to-zinc-50">
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2l1.5 6 6 1.5-6 1.5-1.5 6-1.5-6-6-1.5 6-1.5z' fill='black'/%3E%3C/svg%3E")`,
-            backgroundSize: '40px 40px'
-          }} />
-        </div>
+      <section id="hair-wigs" className="relative bg-[#f6f1ec] py-24 sm:py-32 overflow-hidden">
+        <BlendBg src="/bg/home-hair.webp" side="right" tone="light" opacity={0.85} className="hidden sm:block lg:w-[55%]" />
+        <BlendBg src="/bg/home-hair.webp" side="right" tone="light" opacity={0.25} className="sm:hidden" />
+        <BlendBg src="/bg/home-hair-2.webp" side="left" tone="light" opacity={0.3} className="hidden md:block lg:w-[40%]" />
 
-        {/* Gradient Overlays */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
-
-          {/* Centered Header Section */}
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <div className="mb-8">
-              <Image
-                src="/logos/shash-logo.png"
-                alt="Shasha Hair Wigs"
-                width={3500}
-                height={1200}
-                className="h-20 sm:h-24 md:h-28 w-auto mx-auto"
-                priority
-              />
-            </div>
-
-            <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-zinc-600 font-light mb-6">
-              Premium Hair Solutions
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
+          <div className="max-w-xl">
+            <Image
+              src="/logos/shash-logo.png"
+              alt="Shasha Hair Wigs"
+              width={3500}
+              height={1200}
+              className="h-16 sm:h-20 w-auto mb-8"
+            />
+            <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-amber-800/70 mb-4">
+              Premium Peruvian Wigs
             </p>
-
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-black mb-8">
-              Wigs & Accessories
+            <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-black mb-6">
+              Your crown, ready to wear
             </h2>
-
-            <p className="text-base sm:text-lg text-zinc-700 max-w-2xl mx-auto leading-relaxed">
-              Transform your look with our exquisite collection of premium wigs and hair accessories. Each piece is carefully selected to provide natural beauty, comfort, and confidence.
+            <p className="text-base sm:text-lg text-zinc-700 leading-relaxed">
+              100% Peruvian human hair with a natural lustre, pre-plucked hairlines and undetectable HD lace that
+              blends seamlessly with your scalp, without glue or extra styling.
             </p>
-          </div>
-
-          {/* Three Column Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
-
-            <div className="group text-center">
-              <div className="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mx-auto mb-6 group-hover:bg-zinc-200 transition-all duration-500">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-serif text-black mb-3">Premium Quality</h3>
-              <p className="text-zinc-600 leading-relaxed">
-                Luxury wigs crafted from the finest materials for stunning, natural-looking results
-              </p>
+            <p className="mt-6 text-sm text-zinc-600">
+              <span className="text-black font-medium">From Ksh 10,000</span>
+              <span className="mx-2 text-zinc-400">·</span>Expert styling
+              <span className="mx-2 text-zinc-400">·</span>Wig hire for brides
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/peruvian-wigs"
+                className="px-8 py-4 bg-black text-white rounded-full text-sm tracking-wider uppercase font-medium text-center hover:bg-zinc-800 transition"
+              >
+                View Wigs
+              </Link>
+              <Link
+                href="/hair"
+                className="px-8 py-4 border border-black/30 text-black rounded-full text-sm tracking-wider uppercase font-medium text-center hover:border-black transition"
+              >
+                Shasha Hair
+              </Link>
             </div>
-
-            <div className="group text-center">
-              <div className="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mx-auto mb-6 group-hover:bg-zinc-200 transition-all duration-500">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-serif text-black mb-3">Expert Styling</h3>
-              <p className="text-zinc-600 leading-relaxed">
-                Professional customization and personalized consultations for your perfect look
-              </p>
-            </div>
-
-            <div className="group text-center">
-              <div className="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mx-auto mb-6 group-hover:bg-zinc-200 transition-all duration-500">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-serif text-black mb-3">Endless Variety</h3>
-              <p className="text-zinc-600 leading-relaxed">
-                Extensive collection of styles, lengths, and colors to match every personality
-              </p>
-            </div>
-
           </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/hair"
-              className="group relative px-8 py-4 bg-black text-white rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105"
-            >
-              <span className="relative z-10 text-sm tracking-wider uppercase font-medium flex items-center gap-2">
-                Discover Services
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-zinc-800 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-            </a>
-
-            <a
-              href="/hair#services"
-              className="group px-8 py-4 border-2 border-black/30 text-black rounded-full transition-all duration-500 hover:border-black hover:bg-black/5 hover:shadow-xl hover:scale-105"
-            >
-              <span className="text-sm tracking-wider uppercase font-medium flex items-center gap-2">
-                View Services
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </a>
-          </div>
-
         </div>
       </section>
 
       {/* Revive Aesthetics Section */}
-      <section id="aesthetics" className="relative min-h-screen bg-black py-24 sm:py-32 overflow-hidden">
+      <section id="aesthetics" className="relative bg-black py-24 sm:py-32 overflow-hidden">
+        <BlendBg src="/bg/home-aesthetics.webp" side="right" opacity={0.3} />
+        <BlendBg src="/bg/page-default.webp" side="left" opacity={0.25} className="hidden md:block lg:w-[40%]" />
         {/* Gradient Overlays */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -422,41 +504,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative bg-black text-white py-12">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="text-center space-y-6">
-            <h3 className="text-3xl font-[family-name:var(--font-italianno)]">The Beauty Vault</h3>
-
-            <div className="flex justify-center gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-            </div>
-
-            <div className="pt-6 border-t border-white/10 space-y-2">
-              <p className="text-white/60 text-sm">
-                Nairobi, Kenya
-              </p>
-              <p className="text-white/40 text-sm">
-                © {new Date().getFullYear()} The Beauty Vault. All rights reserved.
-              </p>
-              <p className="text-white/30 text-xs">
-                Powered by <a href="https://stdioxlabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/60 transition-colors">StdioX Labs</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
