@@ -124,11 +124,7 @@ const FOR_WHO = [
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6">
-      <div className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-pink-300" />
-      <div className="w-2 h-2 bg-pink-300 rounded-full" />
       <p className="text-[10px] sm:text-xs tracking-[0.35em] sm:tracking-[0.4em] uppercase text-pink-200 font-light">{children}</p>
-      <div className="w-2 h-2 bg-pink-300 rounded-full" />
-      <div className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-pink-300" />
     </div>
   );
 }
@@ -231,7 +227,7 @@ export default function AcademyPage() {
               Enquire on WhatsApp
             </a>
           </div>
-          <p className="mt-8 text-sm text-white/60">Classes run 8am to 2pm, Friday to Saturday · Absa Towers, Nairobi CBD. Learn UV lashes with the No. 1 UV lash trainers in Kenya.</p>
+          <p className="mt-8 text-sm text-white/60">Beginner classes run Fridays and Saturdays, 8am to 2pm. UV training is a 5-day intensive with a new class every week. All classes are at Absa Towers, Nairobi CBD.</p>
         </div>
       </section>
 

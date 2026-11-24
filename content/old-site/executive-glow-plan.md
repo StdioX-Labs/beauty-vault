@@ -11,8 +11,8 @@ Timeless glam tailored for your lifestyle – efficient, elegant, and effortless
 
 | **Plan** | **Inclusions** | **Price** |
 | --- | --- | --- |
-| **Busy Bee** | 2 Classic Full Sets + 3 Express Refills | Ksh. 8,500 |
-| **Glow On-the-Go** | 3 Classic Sets + 3 Brow Sessions (threading or tint) | Ksh. 11,000 |
+| **Busy Bee** | 2 Classic Full Sets + 3 Express Refills | KES 8,500 |
+| **Glow On-the-Go** | 3 Classic Sets + 3 Brow Sessions (threading or tint) | KES 11,000 |
 
 ### Plan Features:
 * **Prioritized booking** for early morning or late evening slots – no disruption to your workday
@@ -30,7 +30,7 @@ Because you don’t have time for touch-ups in between boardrooms and business t
 
 ### Book With Us Today
 
-\*or give us a call to schedule a treatment [(+254) 0769781 771](tel:+254769781771)
+\*or give us a call to schedule a treatment [+254 769 781 771](tel:+254769781771)
 
 [Book Now](https://booking.lashesbyshazz.com/)
 

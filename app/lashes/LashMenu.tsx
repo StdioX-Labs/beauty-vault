@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { NEW_BOOKING_LIVE, bookServiceUrl } from '@/lib/booking/config';
 
 // Lash price list (Lashes by Shazz price list, November 2026). Prices include VAT.
 // UV lashes come first because they are the studio's lead service.
@@ -102,9 +103,9 @@ function SetCard({
         </dl>
 
         <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={NEW_BOOKING_LIVE ? bookServiceUrl(uv ? `uv-${set.key}` : set.key) : bookingUrl}
+          data-lt-set={`${uv ? 'UV ' : ''}${set.name}`}
+          {...(NEW_BOOKING_LIVE ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
           className="mt-6 inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 tracking-wider uppercase text-xs"
         >
           Book this set <span aria-hidden>→</span>
@@ -118,11 +119,7 @@ function SetCard({
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-4 mb-6">
-      <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-pink-300" />
-      <div className="w-2 h-2 bg-pink-300 rounded-full" />
       <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-pink-200 font-light">{children}</p>
-      <div className="w-2 h-2 bg-pink-300 rounded-full" />
-      <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-pink-300" />
     </div>
   );
 }
@@ -159,7 +156,7 @@ export default function LashMenu({ bookingUrl }: { bookingUrl: string }) {
           <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {UV_BENEFITS.map((b, i) => (
               <li key={b.title} className="flex gap-5">
-                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-pink-300 to-rose-300 text-gray-900 font-semibold flex items-center justify-center">
+                <span className="flex-shrink-0 -mt-0.5 w-8 h-8 rounded-full bg-gradient-to-br from-pink-300 to-rose-300 text-gray-900 text-sm font-semibold flex items-center justify-center">
                   {i + 1}
                 </span>
                 <div>

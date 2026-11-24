@@ -85,13 +85,9 @@ export default function ReviveAesthetics() {
 
                     {/* Decorative line */}
                     <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#c08a35] rounded-full" />
                         <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#e0bd74] font-light px-2">
                             Afro-Urban Beauty & Wellbeing Redefined
                         </p>
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#c08a35] rounded-full" />
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-[family-name:var(--font-italianno)] text-white mb-4 sm:mb-6 drop-shadow-2xl leading-tight">
@@ -150,13 +146,9 @@ export default function ReviveAesthetics() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
-                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-[#e0bd74] font-light">
                                 About REVIVE
                             </p>
-                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
                             Your Safe Space<br />to Glow
@@ -211,13 +203,9 @@ export default function ReviveAesthetics() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
-                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-[#e0bd74] font-light">
                                 Our Services
                             </p>
-                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Transform Your<br />Beauty Journey
@@ -303,13 +291,9 @@ export default function ReviveAesthetics() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c08a35]" />
-                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-[#e0bd74] font-light">
                                 Who We Serve
                             </p>
-                            <div className="w-2 h-2 bg-[#c08a35] rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c08a35]" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Created for<br />You
@@ -328,7 +312,6 @@ export default function ReviveAesthetics() {
                             'Anyone seeking transformation'
                         ].map((client, index) => (
                             <div key={index} className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-white/10 hover:border-white/30 transition-all duration-500 text-center">
-                                <div className="text-3xl mb-3">💛</div>
                                 <p className="text-white/80 font-light text-sm">{client}</p>
                             </div>
                         ))}

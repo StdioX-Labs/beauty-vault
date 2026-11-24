@@ -34,11 +34,10 @@ A meticulous refill using ultra-fine Russian Volume fans (6D–10D) to restore t
 
 ## Our Service & Price List
 
-- **Microshading Refill**: Ksh. 7,500
-- **Microshading**: Ksh. 15,000
-- **Peruvian Wigs**: ksh. 10,000 - Ksh. 50,000
+- **Microshading Refill**: KES 7,500
+- **Microshading**: KES 15,000
+- **Peruvian Wigs**: KES 10,000 - KES 50,000
 
-WE HAVE DIFFERENT TYPES RANGING FROM 10K-40K
 
 | Lash set | Normal | Normal refill | UV Lashes | UV refill |
 | --- | --- | --- | --- | --- |

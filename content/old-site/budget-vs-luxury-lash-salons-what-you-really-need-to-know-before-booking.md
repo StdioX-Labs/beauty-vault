@@ -31,7 +31,6 @@ Budget salons typically use **synthetic lashes** and standard-grade adhesives. T
 
 Luxury salons often use high-quality materials like **silk, faux mink, or real mink lashes**. The adhesives are usually **formulated for sensitive eyes**, and often medical-grade or latex-free. You’ll also get options for **matte vs. glossy finishes**, lash curls, and textures tailored to your natural lashes.
 
-> **Stat #1**: According to a 2024 Lash Industry Survey, **72% of luxury lash clients report longer retention** (over 4 weeks) compared to 38% in budget salons.
 
 ---
 
@@ -45,7 +44,6 @@ Many budget salons hire new technicians or use a **high-turnover model**. While 
 
 Luxury salons usually employ **licensed, highly trained technicians** who continue education in lash artistry. They’re skilled in lash design theory, customization, eye-shape analysis, and more.
 
-> **Stat #2**: Lash techs in luxury salons are **3x more likely to hold advanced certifications** than those in budget salons.
 
 You can always ask to see a technician’s certifications—this is a smart move regardless of the price point.
 
@@ -61,7 +59,6 @@ Not all budget salons are unhygienic, but the fast pace can sometimes mean short
 
 Luxury salons tend to follow strict sanitation protocols: tools are sterilized, lash beds are cleaned between clients, and patch testing is offered to rule out allergic reactions.
 
-> **Stat #3**: The American Academy of Ophthalmology reports that **lash-related eye infections are 65% more likely** to originate from improperly sanitized environments—common in lower-cost salons.
 
 ---
 
@@ -75,7 +72,6 @@ Many budget lash techs follow a “one-size-fits-all” approach. The set might 
 
 Luxury salons excel in **lash mapping**—a technique that designs the lash set around your unique eye shape, lash health, and beauty goals. It’s a custom-fit beauty service.
 
-> **Stat #4**: A 2023 Client Experience Study showed that **86% of clients prefer lash sets that are tailored to their eye shape**—a feature rarely offered in low-cost salons.
 
 ---
 
@@ -103,7 +99,6 @@ Cheaper lashes often fall out faster, and adhesive quality may lead to premature
 
 With proper care and premium materials, luxury lash sets can last **3–5 weeks** before needing a refill.
 
-> **Stat #5**: Over a 6-month period, luxury clients actually **spend 18% less on refills** due to better lash retention.
 
 So while the initial cost may be higher, long-term maintenance could actually be *cheaper* in a luxury setting.
 
@@ -136,11 +131,11 @@ If you’re just trying lashes for the first time, or you’re getting glammed u
 
 ## Ready to Get Lashes You’ll Love?
 
-**Lashes by Shazz Beauty Parlour** is your go-to for premium lash artistry with a warm, professional vibe.
+**Lashes by Shazz** is your go-to for premium lash artistry with a warm, professional vibe.
 
 Whether you want classic, hybrid, or mega-volume lashes, our expert techs will design a custom lash set that’s *perfect* for your face and lifestyle.
 
-We can’t wait to see you—and your gorgeous lashes—soon! 💕
+We can’t wait to see you—and your gorgeous lashes—soon!
 
 [Book your session today](https://booking.lashesbyshazz.com/)
 

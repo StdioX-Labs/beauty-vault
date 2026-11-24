@@ -123,6 +123,11 @@ export function SiteFooter() {
             <p className="text-white/60">{REVIVE.address}</p>
           </div>
           <p className="mt-4 text-sm text-white/60">Lashes by Shazz is open 8am to 8pm, Monday to Saturday.</p>
+          <p className="mt-2 text-sm">
+            <Link href="/branches/hurlingham" className="text-white/70 hover:text-white">Hurlingham branch page</Link>
+            <span className="text-white/30"> · </span>
+            <Link href="/branches/cbd" className="text-white/70 hover:text-white">CBD branch page</Link>
+          </p>
         </div>
         {FOOTER.map((col) => (
           <div key={col.title}>

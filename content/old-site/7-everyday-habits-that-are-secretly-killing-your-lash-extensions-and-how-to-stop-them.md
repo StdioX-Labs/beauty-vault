@@ -6,7 +6,7 @@ So you’ve just dropped good money and time on a fresh set of lash extensions. 
 
 Here’s the thing most lash lovers don’t realize: **your daily habits are probably sabotaging your extensions** without you even knowing it. In this guide, we’ll cover the subtle yet destructive habits that could be causing your lashes to shed faster than they should—and what you can do instead.
 
-According to the *American Lash Association*, 64% of premature lash extension loss is due to improper aftercare—not bad application. And a 2023 Lash Consumer Report revealed that 72% of clients admitted to rubbing their eyes at least once daily. Let’s fix that.
+Most early lash loss comes down to aftercare, not the application itself, and rubbing your eyes is one of the most common culprits. Let’s fix that.
 
 ## You Keep Rubbing Your Eyes (Yes, Even When You’re Not Aware)
 
@@ -42,7 +42,6 @@ Let’s talk ingredients. Your night cream, SPF, makeup remover—even your clea
 
 *Pro Tip: Apply eye cream with a cotton swab, keeping a safe buffer zone around your lash line.*
 
-*Industry Stat: 83% of lash technicians say oil exposure is the top reason for early lash shedding among their clients.*
 
 ## You Skip Cleaning Your Lashes Entirely
 
@@ -60,7 +59,6 @@ Yes, you actually *should* be washing your lashes. A clean lash line = better re
 * Clean with a **soft brush** and rinse gently.
 * Pat dry with a lint-free towel—never rub.
 
-*Industry Stat: Clients who cleanse regularly report 30–50% better lash retention.*
 
 ---
 
@@ -94,7 +92,6 @@ Brushing your lashes keeps them untangled, neat, and looking full. It also preve
 
 This small step can help you spot tangles early and prevent the kind of lash loss that comes from neglect.
 
-*Industry Stat: Lash techs say brushing extends the wearable life of lashes by 15–20%.*
 
 ---
 
@@ -115,7 +112,6 @@ Lash glue (cyanoacrylate) doesn’t play well with heat or humidity. That means 
 * Lower your shower temp slightly
 * Wear protective sunglasses when in harsh sun
 
-*Industry Stat: Lashes exposed to consistent heat lose adhesion up to 2x faster.*
 
 ---
 

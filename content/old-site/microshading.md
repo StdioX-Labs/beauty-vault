@@ -14,12 +14,10 @@ Our trained professionals are committed to delivering expert-level service in a 
 
 ## Our Service & Price List
 
-- **Microshading**: Ksh. 15,000
-- **Microshading Refill**: Ksh. 7,500
+- **Microshading**: KES 15,000
+- **Microshading Refill**: KES 7,500
 
 ## Other Services Price List
-
-SubtTitle Text
 
 | Lash set | Normal | Normal refill | UV Lashes | UV refill |
 | --- | --- | --- | --- | --- |

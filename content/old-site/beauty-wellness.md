@@ -30,9 +30,8 @@ Formulated with antioxidants, vitamins, and amino acids, this drip reduces the a
 
 **Lash removal:** KES 1,160. All prices include VAT. Refill rates apply to sets done within 21 days. [See all UV lash sets](/lashes)
 
-- **Microshading Refill**: Ksh. 7,500
-- **Microshading**: Ksh. 15,000
-- **Peruvian Wigs**: ksh. 10,000 - Ksh. 50,000
+- **Microshading Refill**: KES 7,500
+- **Microshading**: KES 15,000
+- **Peruvian Wigs**: KES 10,000 - KES 50,000
 
-WE HAVE DIFFERENT TYPES RANGING FROM 10K-40K
 

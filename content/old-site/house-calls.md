@@ -12,12 +12,11 @@ Our house call service is designed for clients who prefer personalized, private,
 
 ## What to Expect
 
-✔ **Personalized Service** – Our trained beauty professionals tailor every treatment to your unique preferences and environment.
-✔ **Comfort & Privacy** – Perfect for high-profile clients, new moms, travelers, and anyone who values a quiet, personalized experience.
-✔ **Hygienic & Safe** – We maintain strict sanitation protocols and arrive fully equipped with sterilized tools, disposables, and top-grade products.
-✔ **Africa-Wide Travel** – From Nairobi to Lagos, Accra to Johannesburg — our technicians are available for **regional and international house calls** upon request and booking. Travel fees apply.
+- **Personalized Service** – Our trained beauty professionals tailor every treatment to your unique preferences and environment.
+- **Comfort & Privacy** – Perfect for high-profile clients, new moms, travelers, and anyone who values a quiet, personalized experience.
+- **Hygienic & Safe** – We maintain strict sanitation protocols and arrive fully equipped with sterilized tools, disposables, and top-grade products.
 
-📅 **Flexible scheduling**. 💼 **Corporate and bridal packages available.**
+**Flexible scheduling. Corporate and bridal packages available.**
 **Book your mobile glam session today. Because luxury should meet you where you are.**
 
 ## Our Services & Price List
@@ -31,9 +30,8 @@ Our house call service is designed for clients who prefer personalized, private,
 
 **Lash removal:** KES 1,160. All prices include VAT. Refill rates apply to sets done within 21 days. [See all UV lash sets](/lashes)
 
-- **Microshading Refill**: Ksh. 7,500
-- **Microshading**: Ksh. 15,000
-- **Peruvian Wigs**: ksh. 10,000 - Ksh. 50,000
+- **Microshading Refill**: KES 7,500
+- **Microshading**: KES 15,000
+- **Peruvian Wigs**: KES 10,000 - KES 50,000
 
-WE HAVE DIFFERENT TYPES RANGING FROM 10K-40K
 

@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Italianno } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { TECHS } from "@/lib/techs";
+import { ANALYTICS_URL, ANALYTICS_ANON_KEY } from "@/lib/analytics";
 
 // Google Tag Manager container for the whole site.
 const GTM_ID = "GTM-5M5XVFW4";
+
+// Settings for public/scripts/lbs-track.js (our own analytics, shown in /admin -> Analytics).
+const TRACK_CONFIG = {
+  url: ANALYTICS_URL,
+  key: ANALYTICS_ANON_KEY,
+  techs: Object.fromEntries(TECHS.map((t) => [String(t.staffId), t.name])),
+  techSlugs: Object.fromEntries(TECHS.map((t) => [t.slug, { name: t.name, branch: t.branch }])),
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,6 +70,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <script dangerouslySetInnerHTML={{ __html: `window.__LBS_TRACK=${JSON.stringify(TRACK_CONFIG)};` }} />
         {children}
         <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
@@ -72,6 +83,7 @@ dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
+        <Script id="lbs-track" strategy="afterInteractive" src="/scripts/lbs-track.js" />
       </body>
     </html>
   );

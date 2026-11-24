@@ -1,0 +1,34 @@
+/* Admin -> Clients: small additions on top of analytics.css and admin-theme.css */
+.cl-pill { display: inline-block; margin-left: 4px; padding: 2px 9px; border-radius: 999px; font-size: 10.5px; font-weight: 500; letter-spacing: 0.03em;
+  color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); background: color-mix(in srgb, var(--c) 12%, transparent); white-space: nowrap; }
+.cl-sub { display: block; font-size: 11.5px; color: var(--muted, #888); margin-top: 2px; }
+.cl-sub a { color: inherit; }
+.cl-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.cl-filters input, .cl-filters select, .cl-select {
+  padding: 9px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.92); font: 13px var(--sans); }
+.cl-filters input { flex: 1; min-width: 200px; }
+.cl-filters input:focus, .cl-filters select:focus, .cl-select:focus { outline: none; border-color: #f9a8d4; }
+.cl-filters select option, .cl-select option { background: #111; color: #fff; }
+.cl-select { padding: 6px 10px; font-size: 12px; }
+.cl-row { cursor: pointer; }
+.cl-row:hover td { background: rgba(255, 255, 255, 0.03); }
+.cl-row a { color: #f9a8d4; }
+.cl-more td { background: rgba(249, 168, 212, 0.04); }
+.cl-dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px 20px; margin: 4px 0 14px; }
+.cl-dl dt { font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted, #888); }
+.cl-dl dd { margin: 2px 0 0; }
+.cl-status { font-size: 12px; white-space: nowrap; color: rgba(255, 255, 255, 0.75); }
+.cl-status.s-completed, .cl-status.s-confirmed, .cl-status.s-checked_in { color: #86efac; }
+.cl-status.s-no_show, .cl-status.s-cancelled_client, .cl-status.s-cancelled_salon { color: #fda4af; }
+.cl-status.s-pending_deposit, .cl-status.s-requested { color: #fde68a; }
+
+/* section switch on phones (the sidebar is hidden there) */
+.lbs-m-switch { display: none; }
+@media (max-width: 860px) {
+  .lbs-m-switch { display: inline-flex; gap: 4px; margin-top: 12px; padding: 3px; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 999px; }
+  .lbs-m-switch button { border: 0; background: none; color: rgba(255, 255, 255, 0.65); font: 12px var(--sans); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
+  .lbs-m-switch button.on { background: rgba(249, 168, 212, 0.18); color: #fbcfe8; }
+  .cl-more td { display: block; }
+}
+.cl-table td:nth-child(2), .cl-table td:nth-child(5) { white-space: nowrap; }
