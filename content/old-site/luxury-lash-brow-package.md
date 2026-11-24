@@ -10,12 +10,12 @@ Are you a university or college student looking to stay effortlessly glam withou
 ### Package Options
 | **Plan** | **What’s Included** | **Price** |
 | --- | --- | --- |
-| **3-Month Pass** | 1 Full Set (any style) + 2 Refills | Ksh. 5,500 |
-| **6-Month Pass** | 2 Full Sets (any style) + 4 Refills | Ksh. 10,000 |
+| **3-Month Pass** | 1 Full Set (any style) + 2 Refills | KES 5,500 |
+| **6-Month Pass** | 2 Full Sets (any style) + 4 Refills | KES 10,000 |
 
 ### What You Get:
 * Any lash style of your choice – from **Classic** to **Mega Volume**
-* **Refills at discounted rates** – save Ksh. 500 on every refill
+* **Refills at discounted rates** – save KES 500 on every refill
 * **Complimentary brow threading** with your first full set
 * **10% discount** on:
 
@@ -35,7 +35,7 @@ Whether you’re deep into studies or stepping out for campus events, the **Stud
 
 ### Book With Us Today
 
-\*or give us a call to schedule a treatment [(+254) 0769781 771](tel:+254769781771)
+\*or give us a call to schedule a treatment [+254 769 781 771](tel:+254769781771)
 
 [Book Now](https://booking.lashesbyshazz.com/)
 

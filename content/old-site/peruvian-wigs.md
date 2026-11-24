@@ -12,16 +12,15 @@ From effortless installations to long-lasting wear, these wigs redefine what it 
 
 ## Why Choose Our Peruvian Wigs:
 
-✅ **Undetectable HD Lace** – Designed to melt effortlessly into your skin for a truly invisible finish
-✅ **Pre-Plucked & Ready to Wear** – No customization needed; enjoy a natural hairline straight out of the box
-✅ **Luxury You Can Feel** – Soft, tangle-free strands that are smooth to the touch and easy to style
-✅ **Glue-Free Confidence** – Install with ease—no adhesives, no stress, just instant transformation
+- **Undetectable HD Lace** – Designed to melt effortlessly into your skin for a truly invisible finish
+- **Pre-Plucked & Ready to Wear** – No customization needed; enjoy a natural hairline straight out of the box
+- **Luxury You Can Feel** – Soft, tangle-free strands that are smooth to the touch and easy to style
+- **Glue-Free Confidence** – Install with ease—no adhesives, no stress, just instant transformation
 
 ## Our Service & Price List
 
-- **Peruvian Wigs**: ksh. 10,000 - Ksh. 50,000
+- **Peruvian Wigs**: KES 10,000 - KES 50,000
 
-WE HAVE DIFFERENT TYPES RANGING FROM 10K-40K
 
 ## Other Services Pricing
 

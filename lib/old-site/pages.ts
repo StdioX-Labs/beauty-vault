@@ -3,7 +3,7 @@
 // The page copy lives in content/old-site/<file>.md.
 
 export const SITE_URL = 'https://lashesbyshazz.com';
-export const BOOKING_URL = 'https://booking.lashesbyshazz.com/';
+export { BOOK_URL as BOOKING_URL } from '@/lib/booking/config';
 
 export type OldPage = {
   slug: string; // URL path without slashes, e.g. "lash-extensions" or "category/lashes"
@@ -19,9 +19,9 @@ export const OLD_PAGES: OldPage[] = [
   {
     slug: 'services',
     file: 'services',
-    title: 'Our Services – Lashes by Shazz',
+    title: 'Lash Services & Prices in Nairobi – UV Lashes, Refills, Brows | Lashes by Shazz',
     description:
-      'Lash extensions, lash refills, microshading, Peruvian wigs, IV drips and house calls in Nairobi. See the Lashes by Shazz services and price list.',
+      'UV lashes, lash extensions from KES 2,900, refills, microshading, Peruvian wigs, IV drips and house calls in Nairobi. See prices and book at Hurlingham or CBD.',
     image: '/old-site/services.webp',
     kind: 'page',
   },
@@ -46,7 +46,7 @@ export const OLD_PAGES: OldPage[] = [
   {
     slug: 'contact-us',
     file: 'contact-us',
-    title: 'Contact Us – Lashes by Shazz',
+    title: 'Lash Techs Near You in Nairobi – Contact & Locations | Lashes by Shazz',
     description:
       'Contact Lashes by Shazz. Hurlingham branch: Silverpool Suite, Jabavu Lane, +254 769 781 771. CBD branch: Absa Towers, Lower Ground (Loita Street), +254 792 066 140.',
     image: '/old-site/contact-us.webp',
@@ -74,25 +74,25 @@ export const OLD_PAGES: OldPage[] = [
   {
     slug: 'lash-extensions',
     file: 'lash-extensions',
-    title: 'Lash Extensions in Nairobi, Kenya – Classic to Mega Volume | Lashes by Shazz',
+    title: 'Lash Extensions Price in Nairobi – Classic to Mega Volume from KES 2,900 | Lashes by Shazz',
     description:
-      'Classic, hybrid, volume and mega volume lash extensions in Nairobi from KES 2,900 (VAT included), applied by trained technicians at our Hurlingham and CBD branches.',
+      'Lash extensions price in Nairobi: classic KES 2,900, hybrid KES 4,060, volume KES 5,220, mega volume KES 6,380 (VAT included). UV lashes from KES 4,060. Lash techs near you in Hurlingham and CBD.',
     image: '/old-site/lash-extensions.webp',
     kind: 'service',
   },
   {
     slug: 'lash-refill-services',
     file: 'lash-refill-services',
-    title: 'Lash Refill Services – Lashes by Shazz',
+    title: 'Lash Refill Price in Nairobi – From KES 2,320 | Lashes by Shazz',
     description:
-      'Keep your lash extensions full with a professional refill within 21 days. Classic, hybrid, volume and mega volume refills in Nairobi.',
+      'Lash refill price in Nairobi: classic from KES 2,320, UV refills from KES 2,900 (VAT included). Book a refill within 21 days of your last set in Hurlingham or CBD.',
     image: '/old-site/lash-refill-services.webp',
     kind: 'service',
   },
   {
     slug: 'microshading',
     file: 'microshading',
-    title: 'Microshading – Lashes by Shazz',
+    title: 'Brow Microshading in Nairobi | Lashes by Shazz',
     description:
       'Semi-permanent microshading for fuller, softly powdered brows that last 1 to 2 years. Brow microshading in Nairobi.',
     image: '/old-site/services.webp',
@@ -119,7 +119,7 @@ export const OLD_PAGES: OldPage[] = [
   {
     slug: 'house-calls',
     file: 'house-calls',
-    title: 'House Calls – Lashes by Shazz',
+    title: 'Mobile Lash Technician in Nairobi – House Calls | Lashes by Shazz',
     description:
       'Luxury mobile beauty in Nairobi. Lash extensions and glam at your home, hotel or event with Lashes by Shazz house calls.',
     image: '/old-site/contact-us.webp',
@@ -201,6 +201,16 @@ export const OLD_PAGES: OldPage[] = [
     image: '/old-site/training.webp',
     kind: 'post',
     date: '2026-11-04',
+  },
+  {
+    slug: 'lash-extension-safety-and-aftercare-guide',
+    file: 'lash-extension-safety-and-aftercare-guide',
+    title: 'Are Lash Extensions Safe? Safety and Aftercare Guide for Kenya | Lashes by Shazz',
+    description:
+      'Are lash extensions safe? What causes allergic reactions, infections and lash damage, how to choose a safe lash tech in Nairobi, and a step-by-step aftercare routine for UV and regular lashes.',
+    image: '/old-site/lash-refill-services.webp',
+    kind: 'post',
+    date: '2026-11-24',
   },
   {
     slug: 'are-lash-extensions-dangerous-the-truth-your-salon-isnt-telling-you',

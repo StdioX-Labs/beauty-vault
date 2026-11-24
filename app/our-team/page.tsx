@@ -74,11 +74,7 @@ const teamJsonLd = {
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6">
-      <div className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-pink-300" />
-      <div className="w-2 h-2 bg-pink-300 rounded-full" />
       <p className="text-[10px] sm:text-xs tracking-[0.35em] sm:tracking-[0.4em] uppercase text-pink-200 font-light">{children}</p>
-      <div className="w-2 h-2 bg-pink-300 rounded-full" />
-      <div className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-pink-300" />
     </div>
   );
 }

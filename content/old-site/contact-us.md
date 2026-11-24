@@ -20,8 +20,12 @@ to serving you!
 
 [Silverpool Suite, Jabavu Lane, Nairobi](https://www.google.com/maps/search/?api=1&query=Silverpool+Suites+Jabavu+Lane+Nairobi)
 
+[Hurlingham branch page: hours, map and prices](/branches/hurlingham)
+
 ##### CBD Branch
 
 [+254 792 066 140](tel:+254792066140)
 
 [Absa Towers, Lower Ground (Loita Street)](https://www.google.com/maps/search/?api=1&query=Absa+Towers+Loita+Street+Nairobi)
+
+[CBD branch page: hours, map and prices](/branches/cbd)

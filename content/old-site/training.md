@@ -39,14 +39,14 @@ Never stop learning. Stay sharp and continue to refine your lashing skills with 
 
 * #### [Group Trainings](https://lashtribeafrica.com/)
 
-  KSh45,000.00
+  KES 45,000.00
 * #### [Glam Mastery](https://lashtribeafrica.com/)
 
-  KSh55,000.00
+  KES 55,000.00
 
 ### Book With Us Today
 
-\*or give us a call to schedule a treatment [(+254) 0769781 771](tel:+254769781771)
+\*or give us a call to schedule a treatment [+254 769 781 771](tel:+254769781771)
 
 [Book Now](https://booking.lashesbyshazz.com/)
 

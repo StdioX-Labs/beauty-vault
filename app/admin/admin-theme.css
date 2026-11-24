@@ -1,0 +1,167 @@
+/* Lashes by Shazz look for the admin: the website's near-black background, white text, soft pink accents,
+   Italianno script headings and Geist text, glassy cards with thin light borders.
+   Loaded after admin.css / admin-mobile.css / analytics.css (the shared Lash Tribe layout) and overrides
+   their colours only, so every chart and number works the same. Scoped to .admin-root. */
+
+.admin-root {
+  --blush: rgba(249, 168, 212, 0.14);
+  --warm-white: rgba(255, 255, 255, 0.04);
+  --black: #0a0a0a;
+  --charcoal: rgba(255, 255, 255, 0.92);
+  --grey: rgba(255, 255, 255, 0.1);
+  --rose: #f9a8d4;          /* Tailwind pink-300, the site's accent */
+  --rose-deep: #f472b6;     /* pink-400 */
+  --green: #86efac;
+  --serif: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --script: var(--font-italianno), cursive;
+  --radius: 24px;
+  --radius-sm: 999px;
+  --admin-bg: #0a0a0a;
+  --admin-sidebar: #0a0a0a;
+  --admin-sidebar-text: rgba(255, 255, 255, 0.6);
+  --admin-sidebar-text-active: #ffffff;
+  --admin-card-border: rgba(255, 255, 255, 0.1);
+  --muted: rgba(255, 255, 255, 0.5);
+  --faint: rgba(255, 255, 255, 0.35);
+  background:
+    radial-gradient(60rem 40rem at 100% -10%, rgba(249, 168, 212, 0.10), transparent 60%),
+    radial-gradient(50rem 35rem at -10% 110%, rgba(253, 164, 175, 0.06), transparent 60%),
+    #0a0a0a;
+  background-attachment: fixed;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.admin-root strong, .admin-root b { font-weight: 500; }
+.admin-root ::selection { background: rgba(249, 168, 212, 0.35); }
+
+/* ---------- brand ---------- */
+.lbs-brand { display: flex; align-items: center; gap: 10px; padding: 0 8px; }
+.lbs-brand img { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; }
+.lbs-brand span { font-family: var(--script); font-size: 34px; line-height: 1; color: #fff; white-space: nowrap; }
+.lbs-brand-sub { padding: 6px 8px 0 58px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #fbcfe8; margin-bottom: 28px; }
+
+/* ---------- shell ---------- */
+.admin-sidebar { background: #0d0d0d; border-right: 1px solid rgba(255, 255, 255, 0.06); }
+.admin-nav-item { border-radius: 999px; font-weight: 400; letter-spacing: 0.02em; padding: 10px 16px; }
+.admin-nav-item:hover { background: rgba(255, 255, 255, 0.05); }
+.admin-nav-item.active { background: rgba(249, 168, 212, 0.15); color: #fbcfe8; }
+.admin-sidebar-footer { border-top-color: rgba(255, 255, 255, 0.08); }
+.admin-logout { border-radius: 999px; }
+.admin-topbar { background: transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.06); padding: 26px 32px 22px; }
+.admin-title { font-family: var(--script); font-weight: 400; font-size: 52px; line-height: 0.95; color: #fff; }
+.admin-subtitle { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+/* ---------- buttons ---------- */
+.admin-btn { border-radius: 999px; background: linear-gradient(135deg, #f9a8d4, #fda4af); color: #111; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11.5px; padding: 11px 20px; }
+.admin-btn:hover { background: linear-gradient(135deg, #fbcfe8, #fecdd3); }
+.admin-btn.secondary { background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.85); }
+.admin-btn.secondary:hover { border-color: #f9a8d4; color: #fbcfe8; background: transparent; }
+
+/* ---------- cards, tiles, tables ---------- */
+.admin-card, .admin-stat-card, .an-tile {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+}
+.an-card { padding: 22px 24px; }
+.an-tile { border-radius: 20px; padding: 16px 16px 10px; }
+.an-card-head h3 { font-weight: 400; font-size: 17px; letter-spacing: 0.02em; color: #fff; }
+.an-tile-label, .admin-stat-label { color: var(--muted); font-weight: 400; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; }
+.an-tile-value, .admin-stat-value { font-family: var(--sans); font-weight: 200; font-size: 32px; color: #fff; }
+.admin-stat-value { font-size: 30px; }
+.an-tile-sub, .an-hint, .an-period, .an-legend small, .an-barlabel small, .an-barval small, .an-funnel-head small,
+.an-funnel-num small, .an-table small, .an-feed-what small { color: var(--faint); }
+.an-empty, .an-change { color: var(--faint); }
+.an-change.up { color: #86efac; }
+.an-change.down { color: #fda4af; }
+.an-sub { color: #fbcfe8; font-weight: 400; font-size: 10.5px; letter-spacing: 0.25em; }
+.an-note { background: rgba(249, 168, 212, 0.08); border: 1px solid rgba(249, 168, 212, 0.2); color: rgba(255, 255, 255, 0.8); border-radius: 16px; }
+.an-error { background: rgba(253, 164, 175, 0.1); border: 1px solid rgba(253, 164, 175, 0.3); color: #fecdd3; border-radius: 16px; }
+.admin-table th { color: var(--faint); font-weight: 400; letter-spacing: 0.2em; }
+.admin-table td { border-bottom-color: rgba(255, 255, 255, 0.06); }
+.admin-table th { border-bottom-color: rgba(255, 255, 255, 0.1); }
+
+/* ---------- segmented controls ---------- */
+.an-seg { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); }
+.an-seg button { color: rgba(255, 255, 255, 0.6); font-weight: 400; letter-spacing: 0.04em; }
+.an-seg button:hover { color: #fff; }
+.an-seg button.on { background: linear-gradient(135deg, #f9a8d4, #fda4af); color: #111; font-weight: 500; }
+
+/* ---------- charts ---------- */
+.an-grid { stroke: rgba(255, 255, 255, 0.07); }
+.an-axis { fill: rgba(255, 255, 255, 0.4); }
+.an-tip { background: #fff; color: #111; }
+.an-donut-k { fill: rgba(255, 255, 255, 0.5); }
+.an-donut-v { fill: #fff; font-family: var(--sans); font-weight: 300; }
+.an-legend li.on { background: rgba(255, 255, 255, 0.05); }
+.an-barfill { background: rgba(249, 168, 212, 0.14); }
+.an-barlabel a:hover { color: #fbcfe8; }
+.an-bar, .an-funnel-track { background: rgba(255, 255, 255, 0.07); }
+.an-funnel-bar { background: linear-gradient(90deg, #f472b6, #f9a8d4); }
+.an-funnel-drop, .an-hours-axis, .an-feed-when { color: var(--faint); }
+.an-hour i { background: rgba(249, 168, 212, 0.45); }
+.an-hour.peak i { background: #f9a8d4; }
+.an-more { color: #f9a8d4; }
+.an-ins.good li::marker { color: #86efac; }
+.an-ins.watch li::marker, .an-card ul.watch li::marker { color: #fda4af; }
+.an-feed li { border-bottom-color: rgba(255, 255, 255, 0.06); }
+.an-feed-what { color: rgba(255, 255, 255, 0.8); }
+.an-feed-dot { background: rgba(255, 255, 255, 0.3); }
+.an-feed-dot.page_view { background: #f9a8d4; }
+.an-feed-dot.book_click, .an-feed-dot.book_link_open, .an-feed-dot.enrol_click { background: #fdba74; }
+.an-feed-dot.whatsapp_click, .an-feed-dot.phone_click { background: #86efac; }
+.an-feed-dot.directions_click { background: #93c5fd; }
+.an-feed-dot.shop_click, .an-feed-dot.social_click { background: #c4b5fd; }
+
+/* ---------- sign-in ---------- */
+.admin-login-root { display: grid; place-items: center; padding: 24px; }
+.admin-login-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 36px 30px;
+  backdrop-filter: blur(14px);
+}
+.admin-login-card .lbs-brand { justify-content: center; padding: 0; }
+.admin-login-card .lbs-brand img { width: 56px; height: 56px; }
+.admin-login-card .lbs-brand span { font-size: 44px; }
+.admin-login-tag { text-align: center; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #fbcfe8; margin: 10px 0 26px; }
+.admin-login-card .form-field label { display: block; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.admin-login-card .form-field input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: #fff;
+  font: inherit;
+}
+.admin-login-card .form-field input:focus { outline: none; border-color: #f9a8d4; box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.15); }
+.admin-gate-error { color: #fda4af; margin: 0 0 6px; }
+.admin-root .form-hint { color: var(--muted); }
+
+/* ---------- phone ---------- */
+.admin-mobile-brand { display: none; }
+@media (max-width: 860px) {
+  .admin-mobile-brand { display: flex; margin-bottom: 8px; }
+  .admin-mobile-brand.lbs-brand { padding: 0; }
+  .admin-mobile-brand img { width: 30px; height: 30px; }
+  .admin-mobile-brand span { font-size: 28px; }
+  .admin-topbar {
+    position: static;
+    height: auto;
+    align-items: flex-start;
+    padding: calc(16px + env(safe-area-inset-top, 0px)) 16px 14px;
+  }
+  .admin-title { font-size: 44px; overflow: visible; padding-bottom: 4px; }
+  .admin-content { padding: 20px 16px 48px; }
+  .admin-main { padding-bottom: 0; }
+  .admin-table tr { background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.1); border-radius: 18px; }
+  .admin-table td::before { color: var(--faint); }
+}

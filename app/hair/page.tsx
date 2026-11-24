@@ -118,13 +118,9 @@ export default function ShashaHairSalon() {
 
                     {/* Decorative line */}
                     <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-amber-300" />
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-amber-300 rounded-full" />
                         <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-amber-200 font-light px-2">
                             Ready-to-Wear Wigs | No Stress, Just Good Hair
                         </p>
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-amber-300 rounded-full" />
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-amber-300" />
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-[family-name:var(--font-italianno)] text-white mb-4 sm:mb-6 drop-shadow-2xl leading-tight">
@@ -179,13 +175,9 @@ export default function ShashaHairSalon() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-300" />
-                            <div className="w-2 h-2 bg-amber-300 rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-amber-200 font-light">
                                 Who We Are
                             </p>
-                            <div className="w-2 h-2 bg-amber-300 rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-300" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
                             Effortless Hair.<br />Instant Confidence.
@@ -234,13 +226,9 @@ export default function ShashaHairSalon() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-300" />
-                            <div className="w-2 h-2 bg-amber-300 rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-amber-200 font-light">
                                 Our Collection
                             </p>
-                            <div className="w-2 h-2 bg-amber-300 rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-300" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Ready-to-Wear<br />Perfection
@@ -300,13 +288,9 @@ export default function ShashaHairSalon() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-300" />
-                            <div className="w-2 h-2 bg-amber-300 rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-amber-200 font-light">
                                 Who We Serve
                             </p>
-                            <div className="w-2 h-2 bg-amber-300 rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-300" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             For Women Who<br />Value Their Time
@@ -328,7 +312,6 @@ export default function ShashaHairSalon() {
                             'Style enthusiasts'
                         ].map((client, index) => (
                             <div key={index} className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-white/10 hover:border-amber-300/30 transition-all duration-500 text-center">
-                                <div className="text-3xl mb-3">✨</div>
                                 <p className="text-white/80 font-light text-sm">{client}</p>
                             </div>
                         ))}
@@ -474,7 +457,7 @@ export default function ShashaHairSalon() {
 
                         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
                             <a
-                                href="https://wa.me/"
+                                href="https://wa.me/254769781771?text=Hi%2C%20I%27d%20like%20to%20order%20a%20wig"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group px-10 py-5 bg-gradient-to-r from-amber-200 to-yellow-300 text-gray-900 rounded-full hover:shadow-2xl hover:shadow-amber-300/50 transition-all duration-500 hover:scale-105"
@@ -502,10 +485,10 @@ export default function ShashaHairSalon() {
 
                         <div className="border-t border-white/10 pt-8">
                             <p className="text-white/60 font-light mb-4">
-                                <span className="text-amber-300">📦</span> Nationwide delivery available
+                                Nationwide delivery available
                             </p>
                             <p className="text-white/60 font-light mb-4">
-                                <span className="text-amber-300">📍</span> Visit us in Nairobi, Kenya
+                                Visit us at Silverpool Suite, Jabavu Lane, Hurlingham, Nairobi
                             </p>
                         </div>
                     </div>

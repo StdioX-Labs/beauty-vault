@@ -28,12 +28,12 @@ const priceJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'UV Lash Extensions in Nairobi – Lashes by Shazz',
+  title: 'UV Lash Extensions Price in Nairobi – From KES 4,060 | Lashes by Shazz',
   description:
-    'The #1 UV lash parlour and trainers in Kenya. UV lash extensions with instant curing, no fumes and 4 to 6 weeks retention. Classic, hybrid, volume and mega volume sets from KES 2,900.',
+    'UV lash extensions price list in Nairobi: UV sets from KES 4,060, classic to mega volume from KES 2,900, refills from KES 2,320 (VAT included). The #1 UV lash parlour and trainers in Kenya.',
   alternates: { canonical: `${SITE_URL}/lashes` },
   openGraph: {
-    title: 'UV Lash Extensions in Nairobi – Lashes by Shazz',
+    title: 'UV Lash Extensions Price in Nairobi – From KES 4,060 | Lashes by Shazz',
     description: 'UV lash extensions in Nairobi: instant curing, no irritation, no fumes and 4 to 6 weeks retention.',
     url: `${SITE_URL}/lashes`,
     siteName: 'Lashes by Shazz',

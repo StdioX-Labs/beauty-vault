@@ -6,9 +6,9 @@ A complete, stress-free bridal glow-up — thoughtfully designed to enhance your
 ### Package Options
 | **Plan** | **What’s Included** | **Price** |
 | --- | --- | --- |
-| **Blushing Bride** | Trial Lash Set + Wedding Day Full Set + House Call + Wig Discount | Ksh. 7,000 |
-| **Bride & BFFs** | Bride + 3 Party Members: Full Lashes + Makeup + House Call + Brow Touch-Up | Ksh. 27,000 |
-| **Ultimate Queen** | Everything in “Bride & BFFs” + Wig Rental + After-Wedding Brow Tint + Satin Robe | Ksh. 35,000 |
+| **Blushing Bride** | Trial Lash Set + Wedding Day Full Set + House Call + Wig Discount | KES 7,000 |
+| **Bride & BFFs** | Bride + 3 Party Members: Full Lashes + Makeup + House Call + Brow Touch-Up | KES 27,000 |
+| **Ultimate Queen** | Everything in “Bride & BFFs” + Wig Rental + After-Wedding Brow Tint + Satin Robe | KES 35,000 |
 
 ### All Packages Include:
 * **Complimentary trial session** for the bride
@@ -27,7 +27,7 @@ With the **Luxe Bridal Beauty Bundle**, your bridal glow is handled from trial t
 
 ### Book With Us Today
 
-\*or give us a call to schedule a treatment [(+254) 0769781 771](tel:+254769781771)
+\*or give us a call to schedule a treatment [+254 769 781 771](tel:+254769781771)
 
 [Book Now](https://booking.lashesbyshazz.com/)
 

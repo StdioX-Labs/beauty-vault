@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { OLD_PAGES, SITE_URL } from '@/lib/old-site/pages';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const main = ['', '/lashes', '/about', '/hair', '/aesthetics'].map((p) => ({
+  const main = ['', '/lashes', '/about', '/hair', '/aesthetics', '/branches/hurlingham', '/branches/cbd'].map((p) => ({
     url: `${SITE_URL}${p}`,
     changeFrequency: 'monthly' as const,
     priority: p === '' ? 1 : 0.9,

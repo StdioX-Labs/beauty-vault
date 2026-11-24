@@ -10,14 +10,14 @@ Group slay with luxury perks – professional beauty styling tailored for your e
 
 | **Tier** | **What’s Included** | **Price per Person** |
 | --- | --- | --- |
-| **Glow Squad** | Full Lash Set + Professional Makeup + **Free House Call** | Ksh. 7,500 |
-| **VIP Glam Crew** | Premium Lashes (Wispy or Anime) + Makeup + Brow Service + **Custom Mini Gift** | Ksh. 9,500 |
+| **Glow Squad** | Full Lash Set + Professional Makeup + **Free House Call** | KES 7,500 |
+| **VIP Glam Crew** | Premium Lashes (Wispy or Anime) + Makeup + Brow Service + **Custom Mini Gift** | KES 9,500 |
 
 ### All Packages Include:
 * **Group discount** valid for 4+ participants
 * **Free house calls** within Nairobi – get ready in the comfort of your home or hotel
 * **Bridal perks** – bride receives a complimentary lash + brow trial ahead of the big day
-* **Optional wig hire** available at Ksh. 1,500/day (Peruvian wigs only)
+* **Optional wig hire** available at KES 1,500/day (Peruvian wigs only)
 * **Gift selection for VIP package** – choose from a custom satin robe, tote bag, or mug
 
 ### Why It Works:
@@ -30,7 +30,7 @@ Whether you’re walking down the aisle, celebrating milestones, or just creatin
 
 ### Book With Us Today
 
-\*or give us a call to schedule a treatment [(+254) 0769781 771](tel:+254769781771)
+\*or give us a call to schedule a treatment [+254 769 781 771](tel:+254769781771)
 
 [Book Now](https://booking.lashesbyshazz.com/)
 

@@ -1,5 +1,6 @@
 'use client';
 
+import { BOOK_URL } from '@/lib/booking/config';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -9,7 +10,7 @@ import { SiteFooter } from '@/lib/old-site/SiteShell';
 
 export default function LashesByShazz() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const lashesBookingUrl = 'https://booking.lashesbyshazz.com/';
+    const lashesBookingUrl = BOOK_URL;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -62,13 +63,9 @@ export default function LashesByShazz() {
 
                     {/* Decorative line */}
                     <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-pink-300" />
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-300 rounded-full" />
                         <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-pink-200 font-light px-2">
                             Lashes by Shazz · UV Lash Specialists
                         </p>
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-300 rounded-full" />
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-pink-300" />
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-[family-name:var(--font-italianno)] text-white mb-4 sm:mb-6 drop-shadow-2xl leading-tight">
@@ -132,13 +129,9 @@ export default function LashesByShazz() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-pink-300" />
-                            <div className="w-2 h-2 bg-pink-300 rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-pink-200 font-light">
                                 The Shazz Difference
                             </p>
-                            <div className="w-2 h-2 bg-pink-300 rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-pink-300" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
                             Excellence<br />Redefined
@@ -150,8 +143,8 @@ export default function LashesByShazz() {
                         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-pink-300/30 transition-all duration-500">
                             <div className="flex items-start gap-6">
                                 <div className="flex-shrink-0">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-pink-300 to-rose-300 rounded-2xl flex items-center justify-center shadow-lg">
-                                        <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="-mt-1.5 w-10 h-10 bg-gradient-to-br from-pink-300 to-rose-300 rounded-xl flex items-center justify-center shadow-lg">
+                                        <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                                         </svg>
                                     </div>
@@ -169,8 +162,8 @@ export default function LashesByShazz() {
                         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-pink-300/30 transition-all duration-500">
                             <div className="flex items-start gap-6">
                                 <div className="flex-shrink-0">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-pink-300 to-rose-300 rounded-2xl flex items-center justify-center shadow-lg">
-                                        <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="-mt-1.5 w-10 h-10 bg-gradient-to-br from-pink-300 to-rose-300 rounded-xl flex items-center justify-center shadow-lg">
+                                        <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                                         </svg>
                                     </div>
@@ -188,8 +181,8 @@ export default function LashesByShazz() {
                         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-pink-300/30 transition-all duration-500">
                             <div className="flex items-start gap-6">
                                 <div className="flex-shrink-0">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-pink-300 to-rose-300 rounded-2xl flex items-center justify-center shadow-lg">
-                                        <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="-mt-1.5 w-10 h-10 bg-gradient-to-br from-pink-300 to-rose-300 rounded-xl flex items-center justify-center shadow-lg">
+                                        <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
                                     </div>
@@ -207,8 +200,8 @@ export default function LashesByShazz() {
                         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-pink-300/30 transition-all duration-500">
                             <div className="flex items-start gap-6">
                                 <div className="flex-shrink-0">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-pink-300 to-rose-300 rounded-2xl flex items-center justify-center shadow-lg">
-                                        <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="-mt-1.5 w-10 h-10 bg-gradient-to-br from-pink-300 to-rose-300 rounded-xl flex items-center justify-center shadow-lg">
+                                        <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                         </svg>
                                     </div>
@@ -239,13 +232,9 @@ export default function LashesByShazz() {
 
                 <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 text-center">
                     <div className="flex items-center justify-center gap-4 mb-8">
-                        <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/50" />
-                        <div className="w-2 h-2 bg-white/50 rounded-full" />
                         <p className="text-xs tracking-[0.4em] uppercase text-gray-900/80 font-light">
                             Begin Your Transformation
                         </p>
-                        <div className="w-2 h-2 bg-white/50 rounded-full" />
-                        <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/50" />
                     </div>
 
                     <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-gray-900 mb-6">
@@ -284,33 +273,41 @@ export default function LashesByShazz() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
                             <div className="w-12 h-12 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Call Us</h4>
+                            <p className="text-gray-900/80 text-sm leading-relaxed">
+                                Hurlingham <a href="tel:+254769781771" className="hover:underline">+254 769 781 771</a><br />
+                                CBD <a href="tel:+254792066140" className="hover:underline">+254 792 066 140</a>
+                            </p>
+                        </div>
+
+                        <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
+                            <div className="w-12 h-12 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Email</h4>
+                            <p className="text-gray-900/80 text-sm">
+                                <a href="mailto:lashesbyshazz001@gmail.com" className="hover:underline">lashesbyshazz001@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
+                            <div className="w-12 h-12 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                             </div>
-                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Contact Us</h4>
-                            <p className="text-gray-900/80 text-sm">Hurlingham +254 769 781 771<br />CBD +254 792 066 140</p>
-                        </div>
-
-                        <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
-                            <div className="w-12 h-12 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Email</h4>
-                            <p className="text-gray-900/80 text-sm">lashesbyshazz001@gmail.com</p>
-                        </div>
-
-                        <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-6">
-                            <div className="w-12 h-12 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Address</h4>
-                            <p className="text-gray-900/80 text-sm">Silverpool Suite, Jabavu Lane · Absa Towers, Lower Ground (Loita Street)</p>
+                            <h4 className="font-light text-lg mb-2 text-gray-900 tracking-wide">Visit Us</h4>
+                            <p className="text-gray-900/80 text-sm leading-relaxed">
+                                Hurlingham: Silverpool Suite, Jabavu Lane<br />
+                                CBD: Absa Towers, Lower Ground, Loita Street
+                            </p>
                         </div>
                     </div>
                 </div>

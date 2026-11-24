@@ -8,8 +8,8 @@ Consistency with perks — because loyalty deserves luxury.
 ### Package Options
 | **Plan** | **What’s Included** | **Price** |
 | --- | --- | --- |
-| **21-Day Glow Cycle** | 4 Lash Refills + 1 Brow Touch-Up | Ksh. 7,000 |
-| **VIP Loyalty Club** | 4 Lash Refills + **FREE 5th Refill** + Branded Gift | Ksh. 10,000 |
+| **21-Day Glow Cycle** | 4 Lash Refills + 1 Brow Touch-Up | KES 7,000 |
+| **VIP Loyalty Club** | 4 Lash Refills + **FREE 5th Refill** + Branded Gift | KES 10,000 |
 
 ### Every Plan Includes:
 * **Complimentary lash brush** and a **personalized aftercare card** to keep your set fresh
@@ -27,7 +27,7 @@ With the **Lash Loyalty Luxe Plan**, every refill isn’t just maintenance — i
 
 ### Book With Us Today
 
-\*or give us a call to schedule a treatment [(+254) 0769781 771](tel:+254769781771)
+\*or give us a call to schedule a treatment [+254 769 781 771](tel:+254769781771)
 
 [Book Now](https://booking.lashesbyshazz.com/)
 

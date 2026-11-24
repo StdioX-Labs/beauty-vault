@@ -1,5 +1,11 @@
 # Lashes Blog: Lash Care Tips and Advice
 
+### [Are Lash Extensions Safe? The Complete Safety and Aftercare Guide](/lash-extension-safety-and-aftercare-guide/)
+
+Allergies, infections and lash damage: what really causes them, how to spot a safe lash tech in Nairobi, and a day-by-day aftercare routine that works for UV and regular lashes.
+
+[Read More](/lash-extension-safety-and-aftercare-guide/)
+
 ### [UV Lashes in Kenya: The Complete Guide (Prices, Safety and Aftercare)](/uv-lashes-in-kenya-complete-guide/)
 
 What are UV lashes, are they safe for your eyes, and how much do UV lashes cost in Kenya? Everything you need to know before you book, from the #1 UV lash parlour and trainers in Kenya, with current Nairobi prices, who can and can’t wear them, and how to make them last.

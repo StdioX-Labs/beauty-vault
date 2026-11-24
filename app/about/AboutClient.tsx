@@ -54,13 +54,9 @@ export default function AboutBeautyVault() {
 
                     {/* Decorative line */}
                     <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-white" />
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full" />
                         <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-gray-300 font-light px-2">
                             Your All-in-One Beauty Home
                         </p>
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full" />
-                        <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-white" />
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-[family-name:var(--font-italianno)] text-white mb-4 sm:mb-6 drop-shadow-2xl leading-tight">
@@ -112,13 +108,9 @@ export default function AboutBeautyVault() {
                 <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
                                 About The Beauty Vault
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
                             Where Every<br />Beauty Need Lives
@@ -181,13 +173,9 @@ export default function AboutBeautyVault() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
                                 Our Brands
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Five Brands.<br />One Home.
@@ -449,13 +437,9 @@ export default function AboutBeautyVault() {
                 <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
                                 Training & Masterclasses
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-6">
                             Empower Your<br />Beauty Career
@@ -501,13 +485,9 @@ export default function AboutBeautyVault() {
                 <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
                     <div className="text-center mb-20">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white" />
-                            <div className="w-2 h-2 bg-white rounded-full" />
                             <p className="text-xs tracking-[0.4em] uppercase text-gray-300 font-light">
                                 Who We Serve
                             </p>
-                            <div className="w-2 h-2 bg-white rounded-full" />
-                            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white" />
                         </div>
                         <h2 className="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-italianno)] text-white mb-4">
                             Built For<br />Everyone
@@ -526,7 +506,6 @@ export default function AboutBeautyVault() {
                             'Anyone seeking convenience'
                         ].map((client, index) => (
                             <div key={index} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hover:bg-white/10 hover:border-white/30 transition-all duration-500 text-center">
-                                <div className="text-3xl mb-3">✨</div>
                                 <p className="text-white/80 font-light text-sm">{client}</p>
                             </div>
                         ))}

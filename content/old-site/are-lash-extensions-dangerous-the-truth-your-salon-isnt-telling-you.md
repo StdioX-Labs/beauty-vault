@@ -8,7 +8,7 @@ But with beauty trends come beauty risks—and eyelash extensions are no excepti
 
 As a lash expert who’s been in the industry for years, I’ve seen it all. Gorgeous transformations, yes. But also some horror stories that could have been easily avoided with the right knowledge.
 
-So, are lash extensions dangerous? Let’s dive into the truth your salon might not be telling you.
+So, are lash extensions dangerous? Let’s dive into the truth your salon might not be telling you. For the full checklist, read our [lash extension safety and aftercare guide](/lash-extension-safety-and-aftercare-guide/).
 
 ---
 
@@ -30,15 +30,7 @@ The process can take anywhere from 1.5 to 3 hours and lasts about 3-5 weeks depe
 
 ## The Lash Boom: Why Everyone Wants Them
 
-According to a 2024 report from *Beauty Industry Trends*, the global eyelash extension market is expected to hit **$2.3 billion by 2026**. That’s a lot of lashes!
-
-Here are some eye-opening stats:
-
-1. **85% of lash extension wearers** say they feel more confident without makeup.
-2. **3 in 5 first-time users** said they were not informed of potential side effects.
-3. **40% of allergic reactions** to lash extensions go unreported.
-4. In 2023, **hospital visits for lash-related eye infections rose by 19%**.
-5. **Only 60% of lash technicians** globally are certified or properly trained.
+Lash extensions have become an everyday beauty staple. They save time on makeup and make most people feel more confident. But many first-time clients are never told about the possible side effects, and not every lash technician is properly trained.
 
 Clearly, while lash extensions are popular, there’s still a knowledge gap when it comes to safety.
 
@@ -181,7 +173,7 @@ So, don’t let a few horror stories scare you away. Just be smart, do your home
 
 ## Book Your Lash Session with Confidence
 
-If you’re ready to experience stunning, safe, and expertly applied lash extensions, [***Lashes by Shazz Beauty Parlour***](/) has you covered. Our certified lash artists prioritize safety, sanitation, and gorgeous results every time.
+If you’re ready to experience stunning, safe, and expertly applied lash extensions, [***Lashes by Shazz***](/) has you covered. Our certified lash artists prioritize safety, sanitation, and gorgeous results every time.
 
 Whether you’re a first-timer or a lash veteran, we’ll tailor your look to suit your vibe and your lashes’ health.
 

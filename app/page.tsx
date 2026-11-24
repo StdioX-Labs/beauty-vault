@@ -8,12 +8,12 @@ import { BOOKING_URL as lashesBookingUrl, SITE_URL } from '@/lib/old-site/pages'
 import { ORG_ID, SAME_AS } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Lashes by Shazz | UV Lashes & Lash Extensions in Nairobi, Kenya',
+  title: 'Lashes Nairobi | UV Lashes & Lash Extensions from KES 2,900 | Lashes by Shazz',
   description:
-    'Lashes by Shazz, the #1 UV lash parlour and trainers in Kenya. UV lashes from KES 4,060 and classic, hybrid, volume and mega volume lash extensions from KES 2,900, plus refills and lash training in Hurlingham and Nairobi CBD.',
+    'Lash extensions and UV lashes in Nairobi. Prices from KES 2,900 (UV from KES 4,060), VAT included. Lash techs near you at Hurlingham and CBD, open 8am to 8pm Monday to Saturday. Book online.',
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'Lashes by Shazz | UV Lashes & Lash Extensions in Nairobi, Kenya',
+    title: 'Lashes Nairobi | UV Lashes & Lash Extensions from KES 2,900 | Lashes by Shazz',
     description:
       'UV lashes, classic to mega volume lash extensions, refills and lash training in Hurlingham and Nairobi CBD.',
     url: SITE_URL,
@@ -160,13 +160,9 @@ export default function Home() {
           </h1>
 
           <div className="flex items-center justify-center gap-2 sm:gap-4 mt-4 mb-8 sm:mb-10">
-            <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-pink-300" />
-            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-300 rounded-full" />
             <p className="text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-pink-200 font-light px-2">
               A product of The Beauty Vault
             </p>
-            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-300 rounded-full" />
-            <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-pink-300" />
           </div>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10 sm:mb-12 font-light px-4">
@@ -243,15 +239,17 @@ export default function Home() {
               <ul className="divide-y divide-white/10 border-y border-white/10">
                 {lashServices.map((s) => (
                   <li key={s.href}>
-                    <Link href={s.href} className="group flex items-start justify-between gap-6 py-5">
-                      <div>
-                        {'badge' in s && s.badge && (
-                          <p className="mb-1 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-pink-300">{s.badge}</p>
-                        )}
+                    <Link href={s.href} className="group block py-5">
+                      {'badge' in s && s.badge && (
+                        <p className="mb-1 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-pink-300">{s.badge}</p>
+                      )}
+                      <div className="flex items-center justify-between gap-6">
                         <h3 className="text-xl sm:text-2xl font-serif text-white group-hover:text-pink-200 transition-colors">{s.title}</h3>
-                        <p className="mt-1 text-sm sm:text-base text-white/55 leading-relaxed">{s.text}</p>
+                        <svg aria-hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-white/50 group-hover:text-pink-200 group-hover:translate-x-1 transition">
+                          <path d="M9 6l6 6-6 6" />
+                        </svg>
                       </div>
-                      <span aria-hidden className="mt-2 text-white/40 group-hover:text-pink-200 group-hover:translate-x-1 transition">→</span>
+                      <p className="mt-1 pr-11 text-sm sm:text-base text-white/55 leading-relaxed">{s.text}</p>
                     </Link>
                   </li>
                 ))}
@@ -302,7 +300,7 @@ export default function Home() {
             Train with the No. 1 UV lash parlour and trainers in Kenya. Start with the Beginner Individual Lashes Course,
             or learn UV lashes in a 5-day intensive that runs every week.
           </p>
-          <p className="mt-3 text-sm text-white/50">Classes run 8am to 2pm, Friday to Saturday · Absa Towers, Nairobi CBD</p>
+          <p className="mt-3 text-sm text-white/50">Beginner classes run Fridays and Saturdays, 8am to 2pm · Absa Towers, Nairobi CBD</p>
           <Link href="/training" className="mt-8 inline-block px-8 py-4 rounded-full bg-gradient-to-r from-pink-300 to-rose-300 text-gray-900 text-xs tracking-[0.2em] uppercase font-semibold">
             Explore the Academy
           </Link>
@@ -384,7 +382,7 @@ export default function Home() {
               blends seamlessly with your scalp, without glue or extra styling.
             </p>
             <p className="mt-6 text-sm text-zinc-600">
-              <span className="text-black font-medium">From Ksh 10,000</span>
+              <span className="text-black font-medium">From KES 10,000</span>
               <span className="mx-2 text-zinc-400">·</span>Expert styling
               <span className="mx-2 text-zinc-400">·</span>Wig hire for brides
             </p>

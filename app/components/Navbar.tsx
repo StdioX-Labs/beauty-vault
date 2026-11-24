@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { BOOK_URL } from '@/lib/booking/config';
 
 const LINKS = [
     { href: '/lashes', label: 'Lashes', },
@@ -48,7 +49,7 @@ export default function Navbar() {
     const scroller = useRef<HTMLDivElement>(null);
     const pathname = usePathname() || '/';
     const active = activeHref(pathname);
-    const bookingUrl = 'https://booking.lashesbyshazz.com/';
+    const bookingUrl = BOOK_URL;
 
     useEffect(() => {
         const handleScroll = () => {
